@@ -1,0 +1,211 @@
+.production {
+
+  &__title {
+    margin-top: 60px;
+    margin-bottom: 70px;
+
+    @media (max-width: $middleMonitor) {
+      margin-top: 40px;
+      margin-bottom: 56px;
+    }
+
+    @media (max-width: $smallMonitor) {
+      margin-top: 30px;
+      margin-bottom: 47.6px;
+    }
+  }
+
+  &__container {
+    position: relative;
+    width: 1441px;
+    margin: 0 auto;
+    margin-bottom: 110px;
+    overflow: hidden;
+
+    @media (max-width: $middleMonitor) {
+      width: 1153px;
+      margin-bottom: 88px;
+    }
+
+    @media (max-width: $smallMonitor) {
+      width: 980px;
+      margin-bottom: 74.8px;
+    }
+
+    @media (max-width: $bigTablet) {
+      width: 820px;
+      margin-bottom: 76px;
+    }
+
+    @media (max-width: $tablet) {
+      width: 726px;
+      margin-bottom: 53.2px;
+    }
+
+    @media (max-width: $bigPhone) {
+      width: 355px;
+      margin-bottom: 53.2px;
+    }
+
+    @media (max-width: $smallPhone) {
+      width: 302px;
+      margin-bottom: 45.22px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    list-style: none;
+    transition: transform 0.6s ease
+  }
+
+  &__item {
+    height: 318px;
+    padding: 0 5px;
+
+    flex: 0 0 33.3333333333%; /* ширина слайда */
+    max-width: 33.3333333333%;
+
+    @media (max-width: $middleMonitor) {
+      height: 254.4px;
+    }
+
+    @media (max-width: $smallMonitor) {
+      height: 216.24px;
+    }
+
+    @media (max-width: $bigTablet) {
+      flex: 0 0 50%; /* ширина слайда */
+      max-width: 50%;
+      height: 239.4px;
+    }
+
+    @media (max-width: $tablet) {
+      height: 220px;
+    }
+
+    @media (max-width: $bigPhone) {
+      flex: 0 0 100%; /* ширина слайда */
+      max-width: 100%;
+      height: 249px;
+    }
+
+    @media (max-width: $smallPhone) {
+      height: 212px;
+    }
+  }
+
+  &__link {
+    position: relative;
+    text-decoration: none;
+  }
+
+  &__description {
+    position: absolute;
+    bottom: 50px;
+    left: 21px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16.4px;
+    line-height: 70%;
+    color: #ffffff;
+
+    @media (max-width: $middleMonitor) {
+      bottom: 40px;
+      left: 16.8px;
+      font-size: 13.5px;
+    }
+
+    @media (max-width: $smallMonitor) {
+      bottom: 35px;
+      left: 14.28px;
+      font-size: 12px;
+    }
+
+    @media (max-width: $bigTablet) {
+      bottom: 30px;
+      left: 22.8px;
+      font-size: 14px;
+    }
+
+    @media (max-width: $tablet) {
+      bottom: 32px;
+      left: 22.8px;
+      font-size: 14px;
+    }
+
+    @media (max-width: $bigPhone) {
+      bottom: 38px;
+      left: 30px;
+      font-size: 14px;
+    }
+
+    @media (max-width: $smallPhone) {
+      bottom: 34.3px;
+      left: 25.5px;
+      font-size: 12px;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.slider__button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  width: 50px;
+  height: 50px;
+  background-color: #03aff0;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-60%, -50%);
+    width: 15px;
+    height: 25px;
+    background: url("./images/arrow.svg") no-repeat center;
+    background-size: cover;
+  }
+
+  &--left {
+    left: 2.5%;
+  }
+
+  &--right {
+    right: 2.5%;
+
+    &::before {
+      transform: translate(-40%, -50%) rotate(180deg);
+    }
+  }
+
+  @media (max-width: $middleMonitor) {
+    width: 45px;
+    height: 45px;
+
+    &::before {
+      width: 10px;
+      height: 20px;
+    }
+  }
+
+  @media (max-width: $smallMonitor) {
+    width: 40px;
+    height: 40px;
+
+    &::before {
+      width: 10px;
+      height: 15px;
+    }
+  }
+}

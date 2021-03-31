@@ -1,0 +1,57 @@
+// header
+header(class='page__header')
+    // header__top
+    div(class='header__top')
+        div(class='header__wrapper wrapper')
+            div(class='header__logo logo')
+                picture(class='logo__picture')
+                    source(srcset='./images/logo-tablet.png' media='(max-width: 1080px)')
+                    img(class='logo__img' src='./images/logo.png' alt='логотип Color box')
+            nav(class='header__top-navigation top-navigation')
+                ul(class='top-navigation__list')
+                    li(class='top-navigation__item')
+                        a(class='top-navigation__link' href='#') Creative
+                    li(class='top-navigation__item')
+                        a(class='top-navigation__link' href='#') Design
+                    li(class='top-navigation__item')
+                        a(class='top-navigation__link' href='#') Digital
+                    li(class='top-navigation__item')
+                        a(class='top-navigation__link' href='#') Media
+                    li(class='top-navigation__item')
+                        a(class='top-navigation__link' href='#') Marketing
+                    li(class='top-navigation__item')
+                        a(class='top-navigation__link' href='#') Print
+            div(class='header__contacts header-contacts')
+                a(class='header-contacts__link header-contacts__link--call' href='tel:+7(499)2571478') +7 (499) 257-1478
+                a(class='header-contacts__link header-contacts__link--whatsapp' href='tel:+7(925)5087240') +7 (925) 508-7240
+                a(class='header-contacts__link header-contacts__link--write' href='mailto:info@colorbox.ru') Написать
+    // / header__top
+    // header__bottom
+    div(class='header__bottom')
+        div(class='header__wrapper wrapper')
+            nav(class='header__bottom-navigation bottom-navigation')
+                ul(class='bottom-navigation__list')
+                    li(class='bottom-navigation__item')
+                        a(href='#about-us' class='bottom-navigation__link') О струдии
+                    li(class='bottom-navigation__item')
+                        a(href='#services' class='bottom-navigation__link') Возможности
+                    li(class='bottom-navigation__item')
+                        a(href='#cases' class='bottom-navigation__link') Кейсы
+                    li(class='bottom-navigation__item')
+                        a(href='#clients' class='bottom-navigation__link') Клиенты
+                    li(class='bottom-navigation__item')
+                        a(href='#blog' class='bottom-navigation__link') Блог
+                    li(class='bottom-navigation__item')
+                        a(href='#production' class='bottom-navigation__link') Производство
+                    li(class='bottom-navigation__item')
+                        a(href='#contacts' class='bottom-navigation__link') Контакты
+            div(class='header__social header-social')
+                ul(class='header-social__list')
+                    li(class='header-social__item')
+                        a(href='#' class='header-social__link header-social__link--inst' aria-label='Инстаграмм')
+                    li(class='header-social__item')
+                        a(href='#' class='header-social__link header-social__link--fb' aria-label='Фейсбук')
+                    li(class='header-social__item')
+                        a(href='#' class='header-social__link header-social__link--map' aria-label='На карте')
+    // / header__bottom
+// / header

@@ -1,0 +1,24 @@
+extends ../layout/main
+
+block variables
+    - var title = 'Color Box';
+    - var description = 'Студия Колор Боркс - рекламные и полиграфические услуги для корпоративных и частных клиентов';
+    - var keywords = 'анимацияб презентация видео, дизайн, верстка, препресс, разработка POS материалов, цифровая, офсетная и широкоформатная печать, изготовление сувенерной продукции';
+    - var pageClass = 'index-page';
+
+block content
+    include ../modules/header/header
+
+    main(class="page__main")
+        include ../modules/introduction/introduction
+        include ../modules/statistics/statistics
+        include ../modules/about-us/about-us
+        include ../modules/services/services
+        include ../modules/cases/cases
+        include ../modules/blog/blog
+        include ../modules/clients/clients
+        include ../modules/production/production
+        include ../modules/questions/questions
+        include ../modules/contacts/contacts
+
+    include ../modules/modal-window/modal-window

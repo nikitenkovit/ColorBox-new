@@ -1,0 +1,305 @@
+.introduction {
+  background-color: #00d1e0;
+  margin-top: 82px;
+
+  @media (max-width: $middleMonitor) {
+    margin-top: 55.6px;
+  }
+
+  @media (max-width: $smallMonitor) {
+    margin-top: 49px;
+  }
+
+  @media (max-width: $bigTablet) {
+    margin-top: 142.5px;
+  }
+
+  @media (max-width: $tablet) {
+    margin-top: 99.75px;
+  }
+
+  @media (max-width: $bigPhone) {
+    margin-top: 70px;
+  }
+
+  @media (max-width: $smallPhone) {
+    margin-top: 60px;
+  }
+
+  &__wrapper {
+    position: relative;
+    height: 685px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -90px;
+      left: -207px;
+      width: 778px;
+      height: 778px;
+      background-image: url('./images/introduction-bg-desctop.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+
+    @media (max-width: $middleMonitor) {
+      height: 548px;
+
+      &::before {
+        top: -72px;
+        left: -165.6px;
+        width: 622.4px;
+        height: 622.4px;
+      }
+    }
+
+    @media (max-width: $smallMonitor) {
+      height: 465.8px;
+
+      &::before {
+        top: -61.2px;
+        left: -140.76px;
+        width: 529.04px;
+        height: 529.04px;
+      }
+    }
+
+    @media (max-width: $bigTablet) {
+      width: 100%;
+      height: 528.2px;
+
+      &::before {
+        top: -85.5px;
+        left: 19px;
+        width: 627px;
+        height: 626px;
+        background-image: url('./images/introduction-bg-desctop-mobile.png');
+      }
+    }
+
+    @media (max-width: $tablet) {
+      height: 369.74px;
+
+      &::before {
+        top: -59.85px;
+        left: 13.3px;
+        width: 438.9px;
+        height: 438.2px;
+      }
+    }
+
+    @media (max-width: $bigPhone) {
+      width: 354px;
+      height: 600px;
+      margin: 0 auto;
+      padding-top: 310px;
+
+      &::before {
+        top: -49px;
+        left: 0;
+        width: 356px;
+        height: 356px;
+        background-image: url('./images/introduction-bg-phone.png');
+      }
+    }
+
+    @media (max-width: $smallPhone) {
+      width: 302px;
+      height: 513px;
+      padding-top: 277px;
+
+      &::before {
+        top: -42px;
+        width: 303px;
+        height: 303px;
+      }
+    }
+  }
+
+  &__subtitle {
+    position: absolute;
+    top: 320px;
+    left: 500px;
+    font-family: 'ProximaNovaT-Thin', sans-serif;
+    font-size: 63.75px;
+    line-height: 41.44px;
+
+    &--span {
+      position: absolute;
+      top: 70px;
+      left: 110px;
+    }
+
+    @media (max-width: $middleMonitor) {
+      top: 256px;
+      left: 400px;
+      font-size: 51px;
+      line-height: 33.15px;
+
+      &--span {
+        top: 56px;
+        left: 88px;
+      }
+    }
+
+    @media (max-width: $smallMonitor) {
+      top: 217.6px;
+      left: 340px;
+      font-size: 43.35px;
+      line-height: 27.17px;
+
+      &--span {
+        top: 47.6px;
+        left: 74.8px;
+      }
+    }
+
+    @media (max-width: $bigTablet) {
+      top: 72.25px;
+      left: 551px;
+      font-size: 53px;
+      line-height: 35px;
+      letter-spacing: -2px;
+
+      &--span {
+        top: 57px;
+        left: 95px;
+      }
+    }
+
+    @media (max-width: $tablet) {
+      top: 50.57px;
+      left: 385.7px;
+      font-size: 35.84px;
+      line-height: 23.24px;
+      letter-spacing: -1.4px;
+
+      &--span {
+        top: 39.9px;
+        left: 66.5px;
+      }
+    }
+
+    @media (max-width: $bigPhone) {
+      position: static;
+      padding-left: 10px;
+      font-size: 38.75px;
+      line-height: 110%;
+      letter-spacing: -10%;
+      word-spacing: normal;
+
+      &--span {
+        position: static;
+        display: block;
+        margin-left: 70px;
+        margin-bottom: 25px;
+      }
+    }
+
+    @media (max-width: $smallPhone) {
+      font-size: 31.06px;
+      line-height: 110%;
+
+      &--span {
+        margin-left: 58px;
+        margin-bottom: 23px;
+      }
+    }
+  }
+
+  &__description {
+    position: absolute;
+    top: 484px;
+    left: 615px;
+    width: 575px;
+    font-family: MyriadProLight, sans-serif;
+    font-size: 30.89px;
+    line-height: 35.47px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: -250px;
+      width: 278px;
+      height: 105px;
+      background-image: url('./images/introduction-sign.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+
+    & br {
+      display: none;
+    }
+
+    @media (max-width: $middleMonitor) {
+      top: 387.2px;
+      left: 492px;
+      width: 460px;
+      font-size: 24.71px;
+      line-height: 28.37px;
+
+      &::after {
+        right: -200px;
+        width: 222.4px;
+        height: 84px;
+      }
+    }
+
+    @media (max-width: $smallMonitor) {
+      top: 329.12px;
+      left: 418.2px;
+      width: 391px;
+      font-size: 21px;
+      line-height: 24.1px;
+
+      &::after {
+        right: -170px;
+        width: 189px;
+        height: 71.4px;
+      }
+    }
+
+    @media (max-width: $bigTablet) {
+      top: 205px;
+      left: 560px;
+      width: 460px;
+      font-family: MyriadProLight, sans-serif;
+      font-size: 36px;
+      line-height: 36px;
+      letter-spacing: -0.6px;
+
+      &::after {
+        display: none;
+      }
+
+      & br {
+        display: block;
+      }
+    }
+
+    @media (max-width: $tablet) {
+      top: 140px;
+      left: 390px;
+      width: 330px;
+      font-size: 25.6px;
+      line-height: 25.6px;
+      letter-spacing: -0.2px;
+    }
+
+    @media (max-width: $bigPhone) {
+      position: static;
+      width: 100%;
+      padding-left: 10px;
+      font-size: 25.92px;
+      line-height: 100%;
+      letter-spacing: normal;
+    }
+
+    @media (max-width: $smallPhone) {
+      font-size: 22.12px;
+    }
+  }
+}

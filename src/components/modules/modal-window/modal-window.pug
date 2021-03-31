@@ -1,0 +1,12 @@
+section(class='modal-window modal-window__overlay' role='dialog' aria-modal='true')
+    div(class='modal-window__wrapper')
+        h2.visually-hidden Задать вопрос
+        button(class='modal-window__close-btn' aria-label='Закрыть окно')
+        form(class='modal-window__form ask-form' method='post' action='/scbprint/zayavka.php')
+            label(class='modal-window__label' for='name') Имя
+            input#name(class='modal-window__input' name='name')
+            label(class='modal-window__label' for='number') Телефон
+            input#number(class='modal-window__input' name='number')
+            label(class='modal-window__label' for='message') Ваш вопрос
+            textarea#message(class='modal-window__input modal-window__input--textarea' name='message')
+            button(type='submit' class='modal-window__apply-btn') Отправить

@@ -1,0 +1,82 @@
+.about-us {
+  padding-top: 100px;
+
+  @media (max-width: $middleMonitor) {
+    padding-top: 70px;
+  }
+
+  @media (max-width: $smallMonitor) {
+    padding-top: 55px;
+  }
+
+  @media (max-width: $bigTablet) {
+    padding-top: 40px;
+  }
+
+  @media (max-width: $tablet) {
+    display: none;
+  }
+
+  &__wrapper {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 414px;
+      height: 425px;
+      background: url("./images/znak.png") no-repeat center;
+      background-size: cover;
+    }
+
+    @media (max-width: $middleMonitor) {
+      &::before {
+        width: 319px;
+        height: 328px;
+      }
+    }
+
+    @media (max-width: $smallMonitor) {
+      &::before {
+        width: 242px;
+        height: 248px;
+      }
+    }
+
+    @media (max-width: $bigTablet) {
+      &::before {
+        width: 187px;
+        height: 191px;
+      }
+    }
+  }
+
+  &__description {
+    width: 980px;
+    padding: 81px 50px;
+    background-color: #c8d5ff;
+    font-size: 32px;
+    line-height: 140%;
+
+    @media (max-width: $middleMonitor) {
+      width: 770px;
+      padding: 28px 55px;
+      font-size: 28px;
+    }
+
+    @media (max-width: $smallMonitor) {
+      width: 570px;
+      padding: 26px 50px;
+      font-size: 20px;
+    }
+
+    @media (max-width: $bigTablet) {
+      width: 438px;
+      padding: 15px 15px;
+      font-size: 17.04px;
+      line-height: 24.21px;
+    }
+  }
+}

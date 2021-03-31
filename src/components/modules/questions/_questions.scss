@@ -1,0 +1,327 @@
+.questions {
+  position: relative;
+  height: 300px;
+  margin-bottom: 90px;
+  font-family: 'RobotoBold', sans-serif;
+  color: #ffffff;
+  background: url("./images/questions-bg-2100.jpg") no-repeat center;
+  background-size: 100% 100%;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -70px;
+    left: 50%;
+    width: 1456px;
+    height: 32px;
+    transform: translateX(-50%);
+    background: url("./images/line-bottom.png") no-repeat center;
+    background-size: cover;
+  }
+
+  @media (max-width: $middleMonitor) {
+    height: 240px;
+    margin-bottom: 72px;
+
+    &::after {
+      bottom: -56px;
+      width: 1164.8px;
+      height: 25.6px;
+    }
+  }
+
+  @media (max-width: $smallMonitor) {
+    height: 204px;
+    margin-bottom: 61.2px;
+
+    &::after {
+      bottom: -47.6px;
+      width: 990px;
+      height: 21.76px;
+    }
+  }
+
+  @media (max-width: $bigTablet) {
+    height: 245px;
+    margin-bottom: 0;
+    background: url("./images/questions-bg-mobile.png") no-repeat center;
+    background-size: cover;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  @media (max-width: $tablet) {
+    height: 175px;
+    background: #4893d3;
+  }
+
+  @media (max-width: $bigPhone) {
+    height: 390px;
+  }
+
+  @media (max-width: $smallPhone) {
+    height: 332px;
+  }
+
+  &__wrapper {
+    position: relative;
+    height: 100%;
+    padding-top: 115px;
+    padding-left: 255px;
+
+    @media (max-width: $middleMonitor) {
+      padding-top: 92px;
+      padding-left: 204px;
+    }
+
+    @media (max-width: $smallMonitor) {
+      padding-top: 78.2px;
+      padding-left: 173.4px;
+    }
+
+    @media (max-width: $bigTablet) {
+      position: relative;
+      height: 100%;
+      padding-top: 55px;
+      padding-left: 90px;
+    }
+
+    @media (max-width: $tablet) {
+      padding-top: 40px;
+      padding-left: 110px;
+    }
+
+    @media (max-width: $bigPhone) {
+      padding-top: 25px;
+      padding-left: 0;
+    }
+
+    @media (max-width: $smallPhone) {
+      padding-top: 22px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 24px;
+    font-size: 37.53px;
+    line-height: 20.71px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 115px;
+      left: 140px;
+      width: 85px;
+      height: 85px;
+      background: url("./images/question-sign.png") no-repeat center;
+      background-size: cover;
+    }
+
+    @media (max-width: $middleMonitor) {
+      margin-bottom: 19.2px;
+      font-size: 30px;
+      line-height: 16.5px;
+
+      &::before {
+        top: 92px;
+        left: 112px;
+        width: 68px;
+        height: 68px;
+      }
+    }
+
+    @media (max-width: $smallMonitor) {
+      margin-bottom: 16.32px;
+      font-size: 25.5px;
+      line-height: 14px;
+
+      &::before {
+        top: 78.2px;
+        left: 95.2px;
+        width: 57.8px;
+        height: 57.8px;
+      }
+    }
+
+    @media (max-width: $bigTablet) {
+      margin-bottom: 30px;
+      font-size: 42px;
+      line-height: 12px;
+
+      &::before {
+        top: 90px;
+        left: -35px;
+        width: 103px;
+        height: 103px;
+      }
+    }
+
+    @media (max-width: $tablet) {
+      margin-bottom: 20px;
+      font-size: 29.86px;
+      line-height: 8.78px;
+
+      &::before {
+        top: 50px;
+        left: 0;
+        width: 74px;
+        height: 74px;
+      }
+    }
+
+    @media (max-width: $bigPhone) {
+      margin-bottom: 23px;
+      padding-left: 81px;
+      font-size: 35.26px;
+      line-height: 120%;
+
+      &::before {
+        top: 35px;
+        left: 0;
+        width: 62px;
+        height: 62px;
+      }
+    }
+
+    @media (max-width: $smallPhone) {
+      margin-bottom: 20px;
+      padding-left: 70px;
+      font-size: 30px;
+
+      &::before {
+        top: 26px;
+        width: 52px;
+        height: 52px;
+      }
+    }
+  }
+
+  &__description {
+    width: 765px;
+    font-size: 17.02px;
+    line-height: 20.71px;
+
+    & br {
+      display: none;
+    }
+
+    @media (max-width: $middleMonitor) {
+      width: 612px;
+      font-size: 13.6px;
+      line-height: 16.5px;
+    }
+
+    @media (max-width: $smallMonitor) {
+      width: 520.2px;
+      font-size: 11.6px;
+      line-height: 14px;
+    }
+
+    @media (max-width: $bigTablet) {
+      width: 540px;
+      font-family: Roboto, sans-serif;
+      font-size: 23px;
+      line-height: 23px;
+
+      & br {
+        display: block;
+      }
+    }
+
+    @media (max-width: $tablet) {
+      width: 390px;
+      font-size: 16.35px;
+      line-height: 16.35px;
+    }
+
+    @media (max-width: $bigPhone) {
+      width: 100%;
+      padding-left: 20px;
+      font-size: 21.18px;
+      line-height: 120%;
+
+      & br {
+        display: none;
+      }
+    }
+
+    @media (max-width: $smallPhone) {
+      font-size: 18px;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    top: 125px;
+    right: 132px;
+    width: 237px;
+    height: 76px;
+    border: 2px solid #ffffff;
+    color: inherit;
+    font-size: 24px;
+    font-family: "Roboto", sans-serif;
+    background: transparent;
+    outline: none;
+    cursor: pointer;
+    transition: .2s ease-out;
+
+    &:hover,
+    &:focus {
+      background-color: #ffffff;
+      color: #01aff1;
+    }
+
+    @media (max-width: $middleMonitor) {
+      top: 100px;
+      right: 105.6px;
+      width: 189.6px;
+      height: 60.8px;
+      font-size: 19.2px;
+    }
+
+    @media (max-width: $smallMonitor) {
+      top: 85px;
+      right: 89.76px;
+      width: 161.16px;
+      height: 51.68px;
+      font-size: 16.32px;
+    }
+
+    @media (max-width: $bigTablet) {
+      top: 105px;
+      right: -20px;
+      width: 192px;
+      height: 57.95px;
+      font-size: 23px;
+    }
+
+    @media (max-width: $tablet) {
+      top: 70px;
+      right: 0;
+      width: 137px;
+      height: 45px;
+      font-size: 16px;
+    }
+
+    @media (max-width: $bigPhone) {
+      top: auto;
+      bottom: 30px;
+      right: auto;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 210px;
+      height: 50px;
+      font-size: 23px;
+      line-height: 120%;
+    }
+
+    @media (max-width: $smallPhone) {
+      bottom: 24px;
+      width: 180px;
+      height: 44px;
+      font-size: 20px;
+    }
+  }
+}

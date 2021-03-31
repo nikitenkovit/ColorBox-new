@@ -1,0 +1,320 @@
+.services {
+  padding-top: 155px;
+
+  @media (max-width: $middleMonitor) {
+    padding-top: 120px;
+  }
+
+  @media (max-width: $smallMonitor) {
+    padding-top: 91px;
+  }
+
+  @media (max-width: $bigTablet) {
+    padding-top: 70px;
+  }
+
+  @media (max-width: $tablet) {
+    padding-top: 70px;
+  }
+
+  @media (max-width: $bigPhone) {
+    padding-top: 47px;
+  }
+
+  @media (max-width: $smallPhone) {
+    padding-top: 40px;
+  }
+
+  &__wrapper {
+    position: relative;
+    padding-bottom: 85px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 1456px;
+      height: 32px;
+      transform: translateX(-50%);
+      background: url("./images/line-bottom.png") no-repeat center;
+      background-size: cover;
+    }
+
+    @media (max-width: $middleMonitor) {
+      margin-bottom: 65px;
+
+      &::after {
+        width: 1164.8px;
+        height: 25.6px;
+      }
+    }
+
+    @media (max-width: $smallMonitor) {
+      margin-bottom: 50px;
+
+      &::after {
+        width: 990px;
+        height: 21.76px;
+      }
+    }
+
+    @media (max-width: $bigTablet) {
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: $tablet) {
+      margin-bottom: 70px;
+
+      &::after {
+        width: 752px;
+        height: 19px;
+      }
+    }
+
+    @media (max-width: $bigPhone) {
+      margin-bottom: 35px;
+      padding-bottom: 65px;
+
+      &::after {
+        width: 367px;
+        height: 9px;
+      }
+    }
+
+    @media (max-width: $smallPhone) {
+      margin-bottom: 25px;
+      padding-bottom: 50px;
+
+      &::after {
+        width: 313px;
+        height: 8px;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    list-style: none;
+
+    @media (max-width: $tablet) {
+      display: grid;
+      grid-template-columns: auto auto;
+      justify-content: space-around;
+      grid-row-gap: 65px;
+    }
+
+    @media (max-width: $bigPhone) {
+      grid-row-gap: 36px;
+    }
+
+    @media (max-width: $smallPhone) {
+      grid-row-gap: 26px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 189px;
+    height: 230px;
+    margin-right: 110px;
+    margin-bottom: 82px;
+    font-size: 25.64px;
+    line-height: 70%;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #3a3a39;
+    white-space: nowrap;
+
+
+    &--modeling--mobile {
+      display: none;
+    }
+
+    &:nth-child(5n) {
+      margin-right: 0;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 189px;
+      height: 189px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      z-index: 1;
+    }
+
+    &--idea::before {
+      background-image: url("./images/service/idea.png");
+    }
+
+    &--design::before {
+      background-image: url("./images/service/disain.png");
+    }
+
+    &--prepress::before {
+      background-image: url("./images/service/prepress.png");
+    }
+
+    &--animation::before {
+      background-image: url("./images/service/animation.png");
+    }
+
+    &--video::before {
+      background-image: url("./images/service/video.png");
+    }
+
+    &--presentations::before {
+      background-image: url("./images/service/presintation.png");
+    }
+
+    &--modeling::before {
+      background-image: url("./images/service/modeling.png");
+    }
+
+    &--production::before {
+      background-image: url("./images/service/production.png");
+    }
+
+    &--packaging::before {
+      background-image: url("./images/service/packing.png");
+    }
+
+    &--souvenirs::before {
+      background-image: url("./images/service/suvinir.png");
+    }
+
+    @media (max-width: $middleMonitor) {
+      width: 145px;
+      height: 177px;
+      margin-right: 80px;
+      margin-bottom: 63px;
+      font-size: 20px;
+      line-height: 19px;
+
+      &::before {
+        width: 145px;
+        height: 145px;
+      }
+    }
+
+    @media (max-width: $smallMonitor) {
+      width: 110px;
+      height: 134px;
+      margin-right: 70px;
+      margin-bottom: 48px;
+      font-size: 14px;
+      line-height: 13px;
+
+      &::before {
+        width: 110px;
+        height: 110px;
+      }
+    }
+
+    @media (max-width: $bigTablet) {
+      margin-right: 50px;
+    }
+
+    @media (max-width: $tablet) {
+      width: 250px;
+      height: 252px;
+      margin-right: 0;
+      margin-bottom: 0;
+      background: url("./images/service/mobile/znak.png") no-repeat center;
+      background-size: cover;
+      font-family: "RobotoLight", sans-serif;
+      font-weight: 400;
+      font-size: 30px;
+      line-height: 90%;
+
+      &--modeling--mobile {
+        display: block;
+      }
+
+      &--modeling--desktop {
+        display: none;
+      }
+
+      &::before {
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%, -45%);
+        width: 230px;
+        height: 230px;
+      }
+
+      &--idea::before {
+        background-image: url("./images/service/mobile/idea-mobil.svg");
+      }
+
+      &--design::before {
+        background-image: url("./images/service/mobile/disain-mobil.svg");
+      }
+
+      &--prepress::before {
+        background-image: url("./images/service/mobile/prepress-mobil.svg");
+      }
+
+      &--animation::before {
+        background-image: url("./images/service/mobile/animation-mobil.svg");
+      }
+
+      &--video::before {
+        background-image: url("./images/service/mobile/video-mobil.svg");
+      }
+
+      &--presentations::before {
+        background-image: url("./images/service/mobile/presintations-mobil.svg");
+      }
+
+      &--modeling::before {
+        background-image: url("./images/service/mobile/visialization-mobil.svg");
+      }
+
+      &--production::before {
+        background-image: url("./images/service/mobile/prodaction-mobil.svg");
+      }
+
+      &--packaging::before {
+        background-image: url("./images/service/mobile/packing-mobil.svg");
+      }
+
+      &--souvenirs::before {
+        background-image: url("./images/service/mobile/suvenir-mobil.svg");
+      }
+    }
+
+    @media (max-width: $bigPhone) {
+      width: 147px;
+      height: 151px;
+      margin-right: 0;
+      margin-bottom: 0;
+      font-size: 18px;
+
+      &::before {
+        width: 130px;
+        height: 130px;
+      }
+    }
+
+    @media (max-width: $smallPhone) {
+      width: 126px;
+      height: 129px;
+
+      &::before {
+        width: 120px;
+        height: 120px;
+      }
+    }
+  }
+}

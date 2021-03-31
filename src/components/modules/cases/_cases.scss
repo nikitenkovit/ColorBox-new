@@ -1,0 +1,234 @@
+.cases {
+  &__wrapper {
+    position: relative;
+    padding-bottom: 60px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 1456px;
+      height: 32px;
+      transform: translateX(-50%);
+      background: url("./images/line-bottom.png") no-repeat center;
+      background-size: cover;
+    }
+
+    @media (max-width: $middleMonitor) {
+      padding-bottom: 48px;
+
+      &::after {
+        width: 1164.8px;
+        height: 25.6px;
+      }
+    }
+
+    @media (max-width: $smallMonitor) {
+      padding-bottom: 40.8px;
+
+      &::after {
+        width: 990px;
+        height: 21.76px;
+      }
+    }
+
+    @media (max-width: $bigTablet) {
+      padding-bottom: 0;
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    list-style: none;
+
+    @media (max-width: $tablet) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 24px;
+    }
+
+    @media (max-width: $bigPhone) {
+      grid-gap: 10px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    margin-bottom: 23px;
+    overflow: hidden;
+
+    @media (max-width: $middleMonitor) {
+      margin-bottom: 18.4px;
+    }
+
+    @media (max-width: $smallMonitor) {
+      margin-bottom: 15.64px;
+    }
+
+    @media (max-width: $bigTablet) {
+      margin-bottom: 35.15px;
+
+      &:nth-child(1) {
+        order: -1;
+      }
+
+      &:nth-child(2) {
+        order: -1;
+      }
+
+      &:nth-child(3) {
+        order: -1;
+      }
+
+      &:nth-child(4) {
+        order: -1;
+      }
+
+      &:nth-child(6) {
+        order: -1;
+      }
+    }
+
+    @media (max-width: $tablet) {
+      width: 100%;
+      height: 100%;
+      margin-bottom: 0;
+    }
+
+    &.fr1 {
+      width: 343px;
+      height: 313px;
+
+      @media (max-width: $middleMonitor) {
+        width: 274.4px;
+        height: 250.4px;
+      }
+
+      @media (max-width: $smallMonitor) {
+        width: 233.24px;
+        height: 212.84px;
+      }
+
+      @media (max-width: $bigTablet) {
+        width: 392.35px;
+        height: 356.25px;
+      }
+
+      @media (max-width: $tablet) {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &.fr2 {
+      width: 714px;
+      height: 313px;
+
+      @media (max-width: $middleMonitor) {
+        width: 571.2px;
+        height: 250.4px;
+      }
+
+      @media (max-width: $smallMonitor) {
+        width: 485.52px;
+        height: 212.84px;
+      }
+
+      @media (max-width: $bigTablet) {
+        width: 819.85px;
+        height: 356.25px;
+      }
+
+      @media (max-width: $tablet) {
+        grid-column: 1 / -1;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+.cases-frame {
+  height: 100%;
+
+  &__image {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #03aff0;
+    font-family: 'RobotoLight', sans-serif;
+    font-size: 25px;
+    color: #ffffff;
+
+    @media (max-width: $middleMonitor) {
+      font-size: 20px;
+    }
+
+    @media (max-width: $smallMonitor) {
+      font-size: 17px;
+    }
+
+    @media (max-width: $bigTablet) {
+      font-size: 23.75px;
+    }
+
+    @media (max-width: $tablet) {
+      font-size: 16.62px;
+    }
+
+    @media (max-width: $bigPhone) {
+      font-size: 8.14px;
+    }
+
+    @media (max-width: $smallPhone) {
+      font-size: 7px;
+    }
+  }
+
+  &__name {
+    margin-bottom: 10px;
+
+    @media (max-width: $middleMonitor) {
+      margin-bottom: 8px;
+    }
+
+    @media (max-width: $smallMonitor) {
+      margin-bottom: 6.8px;
+    }
+
+    @media (max-width: $bigTablet) {
+      margin-bottom: 9.5px;
+    }
+
+    @media (max-width: $tablet) {
+      margin-bottom: 6.65px;
+    }
+
+    @media (max-width: $bigPhone) {
+      margin-bottom: 3.2px;
+    }
+
+    @media (max-width: $smallPhone) {
+      margin-bottom: 3px;
+    }
+  }
+}
