@@ -100,7 +100,7 @@
     }
   });
 
-  const linkNav = document.querySelectorAll('[href^="#"]');
+  const linkNav = document.querySelectorAll('.scroll-element');
 
   const V = 0.5;  // скорость, может иметь дробное значение через точку (чем меньше значение - тем больше скорость)
 

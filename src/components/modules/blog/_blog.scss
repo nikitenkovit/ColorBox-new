@@ -113,14 +113,14 @@
     width: 364px;
     height: 365.6px;
     padding-top: 222.4px;
-    padding-left: 25.6px;
+    padding-left: 15px;
   }
 
   @media (max-width: $smallMonitor) {
     width: 309.4px;
     height: 310.76px;
     padding-top: 190.74px;
-    padding-left: 21.76px;
+    padding-left: 15px;
   }
 
   &__link {
@@ -137,7 +137,7 @@
     width: 100px;
     height: 21px;
     background-color: #61aded;
-    font-family: RobotoBold, sans-serif;
+    font-family: 'RobotoBold', sans-serif;
     text-transform: uppercase;
     font-size: 15.15px;
     line-height: 12.84px;
@@ -184,10 +184,10 @@
   }
 
   &__date {
-    margin-bottom: 23px;
-    font-family: RobotoBold, sans-serif;
+    margin-bottom: 19px;
+    font-family: 'RobotoBold', sans-serif;
     font-size: 17px;
-    line-height: 100%;
+    line-height: 70%;
     color: #6e7478;
 
     @media (max-width: $middleMonitor) {
@@ -202,51 +202,42 @@
   }
 
   &__title {
-    margin-bottom: 23px;
-    font-family: RobotoBold, sans-serif;
+    height: 50px;
+    margin-bottom: 0;
+    font-family: 'RobotoBold', sans-serif;
     font-size: 17.69px;
     line-height: 17.69px;
     color: #504e53;
 
     @media (max-width: $middleMonitor) {
-      margin-bottom: 18.4px;
+      height: 39px;
       font-size: 14.15px;
       line-height: 14.15px;
     }
 
     @media (max-width: $smallMonitor) {
-      margin-bottom: 12px;
+      height: 31px;
       font-size: 12.02px;
       line-height: 12.02px;
     }
   }
 
-  .blog__item:nth-child(2) .blog-article__title {
-    margin-bottom: 8px;
-
-    @media (max-width: $middleMonitor) {
-      margin-bottom: 6.4px;
-    }
-
-    @media (max-width: $smallMonitor) {
-      margin-bottom: 4px;
-    }
-  }
-
   &__description {
-    font-family: Roboto, sans-serif;
+    margin-right: 5px;
+    font-family: 'Roboto', sans-serif;
     font-size: 15.16px;
-    line-height: 25.27px;
+    line-height: 20.21px;
     color: #6e7478;
 
     @media (max-width: $middleMonitor) {
-      font-size: 12.12px;
-      line-height: 20.21px;
+      margin-right: 4px;
+      font-size: 12.46px;
+      line-height: 19.73px;
     }
 
     @media (max-width: $smallMonitor) {
-      font-size: 12px;
-      line-height: 120%;
+      font-size: 10px;
+      line-height: 14px;
     }
   }
 }

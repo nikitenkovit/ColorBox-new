@@ -232,3 +232,8 @@
     }
   }
 }
+
+.cases__link:focus .cases-frame__description {
+  top: 0 !important;
+  left: 0 !important;
+}

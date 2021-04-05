@@ -43,22 +43,42 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+// debounce
+const DEBOUNCE_INTERVAL = 300;
+
+export const debounce = (callback, wait = DEBOUNCE_INTERVAL) => {
+    let timeout = null;
+    return (...args) => {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => callback(...args), wait);
+    };
+};
+
 // анимация
 
 const statistics = document.querySelector('.statistics');
-const statisticsCoords = statistics.getBoundingClientRect().top + (statistics.offsetHeight / 2);
+let statisticsCoords = statistics.getBoundingClientRect().top + (statistics.offsetHeight / 2);
 const casesList = document.querySelector('.cases__list')
-const casesListCoords = casesList.getBoundingClientRect().top + (casesList.offsetHeight / 6.5);
+let casesListCoords = casesList.getBoundingClientRect().top + (casesList.offsetHeight / 6.5);
 const blogWrapper = document.querySelector('.blog__wrapper');
-const blogWrapperCoords = blogWrapper.getBoundingClientRect().top + (blogWrapper.offsetHeight / 1.2);
+let blogWrapperCoords = blogWrapper.getBoundingClientRect().top + (blogWrapper.offsetHeight / 1.2);
 const clientsList = document.querySelector('.clients__list');
-const clientsListCoords = clientsList.getBoundingClientRect().top + (clientsList.offsetHeight / 1.4);
+let clientsListCoords = clientsList.getBoundingClientRect().top + (clientsList.offsetHeight / 1.4);
 
 let windowHeight = document.documentElement.clientHeight;
 let bottomHeightValue = 0;
 
-window.addEventListener('scroll', function () {
+const changeHeightSettings = debounce(() => {
+    windowHeight = document.documentElement.clientHeight;
+    statisticsCoords = statistics.getBoundingClientRect().top + (statistics.offsetHeight / 2);
+    casesListCoords = casesList.getBoundingClientRect().top + (casesList.offsetHeight / 6.5);
+    blogWrapperCoords = blogWrapper.getBoundingClientRect().top + (blogWrapper.offsetHeight / 1.2);
+    clientsListCoords = clientsList.getBoundingClientRect().top + (clientsList.offsetHeight / 1.4);
+})
 
+window.addEventListener(`resize`, changeHeightSettings);
+
+window.addEventListener('scroll', function () {
     bottomHeightValue = windowHeight + window.pageYOffset;
     if (bottomHeightValue >= statisticsCoords) {
         startIncreasingNumbers();

@@ -257,7 +257,7 @@
 .header-social__link--inst {
   background-image: url("./images/inst-ico.png");
   background-repeat: no-repeat;
-  background-position: 55% 55%;
+  background-position: center;
   background-size: 60%;
 
   &:hover,
@@ -494,6 +494,10 @@
   .header-social__link {
     width: 24.48px;
     height: 24.48px;
+  }
+
+  .header-social__link--inst {
+    background-position: center;
   }
 
   .header-social__link--map {
