@@ -14,8 +14,8 @@ const PAGES_DIR = `${Paths.SRC}/components/pages/`;
 const PAGES = fs.readdirSync(PAGES_DIR).filter((filename) => filename.endsWith('.pug'));
 
 module.exports = {
-    target: "browserslist",
-    // target: "web",
+    // target: "browserslist",
+    target: "web",
     entry: {
         app: Paths.SRC,
     },

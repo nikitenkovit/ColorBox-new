@@ -10,10 +10,6 @@
     margin-top: 49px;
   }
 
-  @media (max-width: $bigTablet) {
-    margin-top: 142.5px;
-  }
-
   @media (max-width: $tablet) {
     margin-top: 99.75px;
   }
@@ -65,23 +61,12 @@
       }
     }
 
-    @media (max-width: $bigTablet) {
-      width: 100%;
-      height: 528.2px;
-
-      &::before {
-        top: -85.5px;
-        left: 19px;
-        width: 627px;
-        height: 626px;
-        background-image: url('./images/introduction-bg-desctop-mobile.png');
-      }
-    }
-
     @media (max-width: $tablet) {
+      width: 100%;
       height: 369.74px;
 
       &::before {
+        background-image: url('./images/introduction-bg-desctop-mobile.png');
         top: -59.85px;
         left: 13.3px;
         width: 438.9px;
@@ -152,19 +137,6 @@
       &--span {
         top: 47.6px;
         left: 74.8px;
-      }
-    }
-
-    @media (max-width: $bigTablet) {
-      top: 72.25px;
-      left: 551px;
-      font-size: 53px;
-      line-height: 35px;
-      letter-spacing: -2px;
-
-      &--span {
-        top: 57px;
-        left: 95px;
       }
     }
 
@@ -262,14 +234,14 @@
       }
     }
 
-    @media (max-width: $bigTablet) {
-      top: 205px;
-      left: 560px;
-      width: 460px;
-      font-family: MyriadProLight, sans-serif;
-      font-size: 36px;
-      line-height: 36px;
-      letter-spacing: -0.6px;
+    @media (max-width: $tablet) {
+      top: 140px;
+      left: 390px;
+      width: 330px;
+      font-family: 'MyriadProLight', sans-serif;
+      font-size: 25.6px;
+      line-height: 25.6px;
+      letter-spacing: -0.2px;
 
       &::after {
         display: none;
@@ -278,15 +250,6 @@
       & br {
         display: block;
       }
-    }
-
-    @media (max-width: $tablet) {
-      top: 140px;
-      left: 390px;
-      width: 330px;
-      font-size: 25.6px;
-      line-height: 25.6px;
-      letter-spacing: -0.2px;
     }
 
     @media (max-width: $bigPhone) {

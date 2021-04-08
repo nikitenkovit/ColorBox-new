@@ -1,20 +1,22 @@
 section.statistics
-    div(class='statistics__wrapper wrapper')
+    .statistics__wrapper.wrapper
         h2.visually-hidden Статистика компании
-        table(class='statistics__table statistics-table')
-            tr(class='statistics-table__row')
-                th#statistics-number-1(class='statistics-table__th') 1687
-                th#statistics-number-2(class='statistics-table__th') 17
-                th#statistics-number-3(class='statistics-table__th') 87
-                th#statistics-number-4(class='statistics-table__th') 564
-            tr(class='statistics-table__row')
-                td(class='statistics-table__td') Проекта
-                    br(class='statistics-table__br')
+        dl.statistics__list
+            .statistics__group
+                dt.statistics__term.statistics-number-1 1687
+                dd.statistics__definition Проекта
+                    br.statistics__br
                     | реализовано
-                td(class='statistics-table__td') Лет на рынке
-                td(class='statistics-table__td') Уникальных
-                    br(class='statistics-table__br')
+            .statistics__group
+                dt.statistics__term.statistics-number-2 17
+                dd.statistics__definition Лет на рынке
+            .statistics__group
+                dt.statistics__term.statistics-number-3 87
+                dd.statistics__definition Уникальных
+                    br.statistics__br
                     | проектов
-                td(class='statistics-table__td') Клиента
-                    br(class='statistics-table__br')
+            .statistics__group
+                dt.statistics__term.statistics-number-4 864
+                dd.statistics__definition Клиента
+                    br.statistics__br
                     | по всему миру

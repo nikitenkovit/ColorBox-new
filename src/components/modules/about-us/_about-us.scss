@@ -9,10 +9,6 @@
     padding-top: 55px;
   }
 
-  @media (max-width: $bigTablet) {
-    padding-top: 40px;
-  }
-
   @media (max-width: $tablet) {
     display: none;
   }
@@ -44,13 +40,6 @@
         height: 248px;
       }
     }
-
-    @media (max-width: $bigTablet) {
-      &::before {
-        width: 187px;
-        height: 191px;
-      }
-    }
   }
 
   &__description {
@@ -70,13 +59,6 @@
       width: 570px;
       padding: 26px 50px;
       font-size: 20px;
-    }
-
-    @media (max-width: $bigTablet) {
-      width: 438px;
-      padding: 15px 15px;
-      font-size: 17.04px;
-      line-height: 24.21px;
     }
   }
 }

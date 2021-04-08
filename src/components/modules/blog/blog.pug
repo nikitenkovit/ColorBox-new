@@ -1,11 +1,13 @@
 section#blog.blog
     h2(class='blog__title section-title') Блог
     div(class='blog__container')
-        div(class='blog__wrapper wrapper')
+        div(class='blog__wrapper slider__wrapper')
             h3(class='blog__subtitle') Полезная информация
-            a(class='blog__link-to-all-articles' href='#') Посмотреть всё
-            ul(class='blog__list')
-                li(class='blog__item')
+            //a(class='blog__link-to-all-articles' href='#') Посмотреть всё
+            button(class='slider__button slider__button--left slider__control' data-slide="prev" aria-label='кнопка слайдера влево')
+            button(class='slider__button slider__button--right slider__control' data-slide="next" aria-label='кнопка слайдера вправо')
+            ul(class='blog__list slider__items')
+                li(class='blog__item slider__item')
                     article(class='blog__article blog-article')
                         a(class='blog-article__link' href='/stati/stati_3.html')
                             span(class='blog-article__flag') Статьи
@@ -15,7 +17,7 @@ section#blog.blog
                             p(class='blog-article__description')
                                 | Разработка презентаций, дизайн и печать презентов для торговых представителей, деловыз переговоров,
                                 | тренингов.
-                li(class='blog__item')
+                li(class='blog__item slider__item')
                     article(class='blog__article blog-article')
                         a(class='blog-article__link' href='/stati/stati_2.html')
                             span(class='blog-article__flag') Статьи
@@ -25,7 +27,7 @@ section#blog.blog
                             p(class='blog-article__description')
                                 | Именно упаковка продукта является коммуникационным посредником между потребителем товара и его
                                 | производителем.
-                li(class='blog__item')
+                li(class='blog__item slider__item')
                     article(class='blog__article blog-article')
                         a(class='blog-article__link' href='/stati/stati_1.html')
                             span(class='blog-article__flag') Статьи
@@ -36,3 +38,24 @@ section#blog.blog
                                 | Мы делаем самые разные журналы: научно-популярные,
                                 | глянцевые, детские, развлекательные, корпоративные,
                                 | медицинские, профессиональные, подарочные.
+
+                li(class='blog__item slider__item')
+                    article(class='blog__article blog-article')
+                        a(class='blog-article__link' href='/stati/stati_1.html')
+                            span(class='blog-article__flag') Статьи
+                            img(class='blog-article__image' src='./images/article-1.jpg' alt='Изображение статьи')
+                            p(class='blog-article__date') 25.05.2017
+                            h4(class='blog-article__title') ПОВТОР ДЛЯ ТЕСТА СЛАЙДЕРА!!!
+                            p(class='blog-article__description')
+                                | много-текста-который-выходит-за-контейнер-и-тест-скрола-текста-вниз,
+                                | много-текста-который-выходит-за-контейнер-и-тест-скрола-текста-вниз,
+                                | много-текста-который-выходит-за-контейнер-и-тест-скрола-текста-вниз,
+                                | много-текста-который-выходит-за-контейнер-и-тест-скрола-текста-вниз,
+                                | много-текста-который-выходит-за-контейнер-и-тест-скрола-текста-вниз,
+                                | много-текста-который-выходит-за-контейнер-и-тест-скрола-текста-вниз,
+                                | много-текста-который-выходит-за-контейнер-и-тест-скрола-текста-вниз,
+                                | много-текста-который-выходит-за-контейнер-и-тест-скрола-текста-вниз,
+                                | много-текста-который-выходит-за-контейнер-и-тест-скрола-текста-вниз,
+                                | много-текста-который-выходит-за-контейнер-и-тест-скрола-текста-вниз,
+                                | много-текста-который-выходит-за-контейнер-и-тест-скрола-текста-вниз,
+                                | много-текста-который-выходит-за-контейнер-и-тест-скрола-текста-вниз,

@@ -17,6 +17,14 @@
 
 .clients__title {
   margin-top: 70px;
+
+  @media (max-width: $smallMonitor) {
+    margin-top: 51px !important;
+  }
+
+  @media (max-width: $bigPhone) {
+    margin-top: 35px !important;
+  }
 }
 
 .clients__list {
@@ -25,12 +33,7 @@
   justify-content: space-between;
   width: 100%;
   list-style: none;
-  opacity: 0;
   transition: 1.2s ease-out;
-}
-
-.clients__list--show {
-  opacity: 1;
 }
 
 .clients__item {
@@ -82,44 +85,27 @@
   }
 }
 
-@media (max-width: $bigTablet) {
+@media (max-width: $tablet) {
   .clients__wrapper {
     position: relative;
     padding-bottom: 0;
 
     &::after {
-     display: none;
-    }
-  }
-
-  .clients__title {
-    margin-bottom: 61.75px;
-  }
-
-  .clients__item {
-    width: 50%;
-    margin-bottom: 42.75px;
-
-    &:nth-child(12) {
-      display: none;
-    }
-    &:last-child {
       display: none;
     }
   }
 
-  .clients__image {
-   object-fit: cover;
-  }
-}
-
-@media (max-width: $tablet) {
   .clients__title {
     margin-bottom: 43.22px;
   }
 
   .clients__item {
+    width: 50%;
     margin-bottom: 29.92px;
+  }
+
+  .clients__image {
+    object-fit: cover;
   }
 }
 

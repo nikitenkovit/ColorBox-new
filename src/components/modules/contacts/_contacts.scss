@@ -9,10 +9,6 @@
     height: 734.4px;
   }
 
-  @media (max-width: $bigTablet) {
-    height: 1026px;
-  }
-
   @media (max-width: $tablet) {
     height: 718.2px;
   }
@@ -37,14 +33,8 @@
       margin-bottom: 102px;
     }
 
-    @media (max-width: $bigTablet) {
-      width: 100%;
-      margin-top: 77.9px;
-      margin-bottom: 75px;
-      font-size: 37.75px;
-    }
-
     @media (max-width: $tablet) {
+      width: 100%;
       margin-top: 54.53px;
       margin-bottom: 59px;
       font-size: 26.84px;
@@ -68,16 +58,12 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-    @media (max-width: $bigTablet) {
+    @media (max-width: $tablet) {
       display: flex;
       flex-wrap: nowrap;
       flex-direction: column;
       align-items: center;
       justify-content: space-between;
-      width: 665px;
-    }
-
-    @media (max-width: $tablet) {
       width: 470px;
     }
 
@@ -89,7 +75,6 @@
   &__map {
     width: 876px;
     height: 529px;
-    box-shadow: 0 0 15px 5px rgba(1, 1, 1, 0.3);
 
     @media (max-width: $middleMonitor) {
       width: 700px;
@@ -101,12 +86,8 @@
       height: 359.5px;
     }
 
-    @media (max-width: $bigTablet) {
-      width: 100%;
-      height: 380px;
-    }
-
     @media (max-width: $tablet) {
+      width: 100%;
       height: 287px;
     }
 
@@ -137,14 +118,10 @@
     width: 319.6px;
   }
 
-  @media (max-width: $bigTablet) {
-    width: 100%;
-    margin-bottom: 39.9px;
-    text-align: center;
-  }
-
   @media (max-width: $tablet) {
+    width: 100%;
     margin-bottom: 30px;
+    text-align: center;
   }
 
   @media (max-width: $bigPhone) {
@@ -171,12 +148,6 @@
       margin-bottom: 51px;
       font-size: 17.34px;
       line-height: 12.24px;
-    }
-
-    @media (max-width: $bigTablet) {
-      margin-bottom: 16px;
-      font-size: 25.51px;
-      line-height: 18px;
     }
 
     @media (max-width: $tablet) {
@@ -218,16 +189,9 @@
       line-height: 19.27px;
     }
 
-    @media (max-width: $bigTablet) {
-      width: 490px;
-      margin: 0 auto;
-      margin-bottom: 50px;
-      font-size: 27px;
-      line-height: 28.35px;
-    }
-
     @media (max-width: $tablet) {
       width: 342px;
+      margin: 0 auto;
       margin-bottom: 40px;
       font-size: 19.2px;
       line-height: 20.16px;
@@ -261,15 +225,11 @@
       font-size: 14px;
     }
 
-    @media (max-width: $bigTablet) {
+    @media (max-width: $tablet) {
       display: inline-block;
       width: 100%;
-      font-size: 20px;
       color: #000000;
       text-align: left;
-    }
-
-    @media (max-width: $tablet) {
       font-size: 18px;
     }
 

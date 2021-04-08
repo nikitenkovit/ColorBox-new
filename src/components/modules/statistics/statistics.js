@@ -1,8 +1,8 @@
 const statisticsBlock = document.querySelector('.statistics');
-const elementNumberOne = document.getElementById('statistics-number-1');
-const elementNumberTwo = document.getElementById('statistics-number-2');
-const elementNumberThree = document.getElementById('statistics-number-3');
-const elementNumberFour = document.getElementById('statistics-number-4');
+const elementNumberOne = document.querySelector('.statistics-number-1');
+const elementNumberTwo = document.querySelector('.statistics-number-2');
+const elementNumberThree = document.querySelector('.statistics-number-3');
+const elementNumberFour = document.querySelector('.statistics-number-4');
 
 const necessaryNumberOne = parseInt(elementNumberOne.textContent, 10);
 const necessaryNumberTwo = parseInt(elementNumberTwo.textContent, 10);

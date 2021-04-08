@@ -1,0 +1,56 @@
+.slider__button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  width: 50px;
+  height: 50px;
+  background-color: #03aff0;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-60%, -50%);
+    width: 15px;
+    height: 25px;
+    background: url("./images/arrow.svg") no-repeat center;
+    background-size: cover;
+  }
+
+  &--left {
+    left: 2.5%;
+  }
+
+  &--right {
+    right: 2.5%;
+
+    &::before {
+      transform: translate(-40%, -50%) rotate(180deg);
+    }
+  }
+
+  @media (max-width: $middleMonitor) {
+    width: 45px;
+    height: 45px;
+
+    &::before {
+      width: 10px;
+      height: 20px;
+    }
+  }
+
+  @media (max-width: $smallMonitor) {
+    width: 40px;
+    height: 40px;
+
+    &::before {
+      width: 10px;
+      height: 15px;
+    }
+  }
+}

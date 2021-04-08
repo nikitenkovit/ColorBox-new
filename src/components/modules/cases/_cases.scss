@@ -12,7 +12,7 @@
       height: 32px;
       transform: translateX(-50%);
       background: url("./images/line-bottom.png") no-repeat center;
-      background-size: cover;
+      background-size: contain;
     }
 
     @media (max-width: $middleMonitor) {
@@ -33,11 +33,31 @@
       }
     }
 
-    @media (max-width: $bigTablet) {
-      padding-bottom: 0;
+    @media (max-width: $tablet) {
+      margin-bottom: 0;
+      padding-bottom: 60px;
 
       &::after {
-        display: none;
+        width: 752px;
+        height: 19px;
+      }
+    }
+
+    @media (max-width: $bigPhone) {
+      padding-bottom: 65px;
+
+      &::after {
+        width: 367px;
+        height: 9px;
+      }
+    }
+
+    @media (max-width: $smallPhone) {
+      padding-bottom: 50px;
+
+      &::after {
+        width: 313px;
+        height: 8px;
       }
     }
   }
@@ -73,30 +93,6 @@
       margin-bottom: 15.64px;
     }
 
-    @media (max-width: $bigTablet) {
-      margin-bottom: 35.15px;
-
-      &:nth-child(1) {
-        order: -1;
-      }
-
-      &:nth-child(2) {
-        order: -1;
-      }
-
-      &:nth-child(3) {
-        order: -1;
-      }
-
-      &:nth-child(4) {
-        order: -1;
-      }
-
-      &:nth-child(6) {
-        order: -1;
-      }
-    }
-
     @media (max-width: $tablet) {
       width: 100%;
       height: 100%;
@@ -115,11 +111,6 @@
       @media (max-width: $smallMonitor) {
         width: 233.24px;
         height: 212.84px;
-      }
-
-      @media (max-width: $bigTablet) {
-        width: 392.35px;
-        height: 356.25px;
       }
 
       @media (max-width: $tablet) {
@@ -142,13 +133,8 @@
         height: 212.84px;
       }
 
-      @media (max-width: $bigTablet) {
-        width: 819.85px;
-        height: 356.25px;
-      }
-
       @media (max-width: $tablet) {
-        grid-column: 1 / -1;
+        //grid-column: 1 / -1;
         width: 100%;
         height: 100%;
       }
@@ -174,7 +160,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: #03aff0;
+    background-color: rgba(3, 175, 240, .8);
     font-family: 'RobotoLight', sans-serif;
     font-size: 25px;
     color: #ffffff;
@@ -185,10 +171,6 @@
 
     @media (max-width: $smallMonitor) {
       font-size: 17px;
-    }
-
-    @media (max-width: $bigTablet) {
-      font-size: 23.75px;
     }
 
     @media (max-width: $tablet) {
@@ -213,10 +195,6 @@
 
     @media (max-width: $smallMonitor) {
       margin-bottom: 6.8px;
-    }
-
-    @media (max-width: $bigTablet) {
-      margin-bottom: 9.5px;
     }
 
     @media (max-width: $tablet) {

@@ -59,8 +59,7 @@
 //$middleMonitor: 1850px;
 $middleMonitor: 2100px;
 $smallMonitor: 1400px;
-$bigTablet: 1080px;
-$tablet: 1020px;
+$tablet: 1080px;
 $bigPhone: 767px;
 $smallPhone: 374px;
 
@@ -115,7 +114,6 @@ html, body {
   }
 }
 
-
 @media (max-width: $smallMonitor) {
   .wrapper {
     width: 980.05px;
@@ -124,18 +122,6 @@ html, body {
     margin-top: 17px;
     margin-bottom: 51px;
     font-size: 34px;
-  }
-}
-
-@media (max-width: $bigTablet) {
-  .wrapper {
-    width: 820px;
-  }
-  .section-title {
-    margin-top: 57px;
-    margin-bottom: 100px;
-    font-size: 39.69px;
-    line-height: 20.52px;
   }
 }
 
@@ -175,6 +161,7 @@ html, body {
   }
 }
 
+@import "slider-bottons";
 @import "../components/modules/header/header";
 @import "../components/modules/introduction/introduction";
 @import "../components/modules/statistics/statistics";

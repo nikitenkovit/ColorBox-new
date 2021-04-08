@@ -41,20 +41,14 @@
     }
   }
 
-  @media (max-width: $bigTablet) {
-    height: 245px;
+  @media (max-width: $tablet) {
+    height: 175px;
+    background: #4893d3;
     margin-bottom: 0;
-    background: url("./images/questions-bg-mobile.png") no-repeat center;
-    background-size: cover;
 
     &::after {
       display: none;
     }
-  }
-
-  @media (max-width: $tablet) {
-    height: 175px;
-    background: #4893d3;
   }
 
   @media (max-width: $bigPhone) {
@@ -81,14 +75,9 @@
       padding-left: 173.4px;
     }
 
-    @media (max-width: $bigTablet) {
+    @media (max-width: $tablet) {
       position: relative;
       height: 100%;
-      padding-top: 55px;
-      padding-left: 90px;
-    }
-
-    @media (max-width: $tablet) {
       padding-top: 40px;
       padding-left: 110px;
     }
@@ -142,19 +131,6 @@
         left: 95.2px;
         width: 57.8px;
         height: 57.8px;
-      }
-    }
-
-    @media (max-width: $bigTablet) {
-      margin-bottom: 30px;
-      font-size: 42px;
-      line-height: 12px;
-
-      &::before {
-        top: 90px;
-        left: -35px;
-        width: 103px;
-        height: 103px;
       }
     }
 
@@ -219,21 +195,15 @@
       line-height: 14px;
     }
 
-    @media (max-width: $bigTablet) {
-      width: 540px;
-      font-family: Roboto, sans-serif;
-      font-size: 23px;
-      line-height: 23px;
+    @media (max-width: $tablet) {
+      width: 390px;
+      font-family: 'Roboto', sans-serif;
+      font-size: 16.35px;
+      line-height: 16.35px;
 
       & br {
         display: block;
       }
-    }
-
-    @media (max-width: $tablet) {
-      width: 390px;
-      font-size: 16.35px;
-      line-height: 16.35px;
     }
 
     @media (max-width: $bigPhone) {
@@ -287,14 +257,6 @@
       width: 161.16px;
       height: 51.68px;
       font-size: 16.32px;
-    }
-
-    @media (max-width: $bigTablet) {
-      top: 105px;
-      right: -20px;
-      width: 192px;
-      height: 57.95px;
-      font-size: 23px;
     }
 
     @media (max-width: $tablet) {
