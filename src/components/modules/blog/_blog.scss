@@ -274,8 +274,20 @@
     font-size: 15.16px;
     line-height: 20.21px;
     color: #6e7478;
-    overflow: scroll;
+    overflow-y: scroll;
     height: 57px;
+
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
+    scrollbar-width: none;
+    scrollbar-height: none;
+
+    &::-webkit-scrollbar {
+      width: 0 !important;
+      height: 0 !important;
+      display: none !important;
+      background: transparent;
+    }
 
     @media (max-width: $middleMonitor) {
       margin-right: 4px;
