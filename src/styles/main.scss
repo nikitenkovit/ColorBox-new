@@ -174,3 +174,12 @@ html, body {
 @import "../components/modules/questions/questions";
 @import "../components/modules/contacts/contacts";
 @import "../components/modules/modal-window/modal";
+
+input:not([type=checkbox]):not([type=radio]),
+textarea,
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0;
+}
