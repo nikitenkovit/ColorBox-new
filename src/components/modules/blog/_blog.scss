@@ -116,6 +116,12 @@
       padding: 0 5px;
     }
 
+    @media (max-width: $tablet) {
+      flex: 0 0 50%; /* ширина слайда */
+      max-width: 50%;
+      padding: 0 5px;
+    }
+
     @media (max-width: $bigPhone) {
       flex: 0 0 100%; /* ширина слайда */
       max-width: 100%;

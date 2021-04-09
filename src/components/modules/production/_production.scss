@@ -32,11 +32,6 @@
       margin-bottom: 74.8px;
     }
 
-    //@media (max-width: $bigTablet) {
-    //  width: 820px;
-    //  margin-bottom: 76px;
-    //}
-
     @media (max-width: $tablet) {
       width: 726px;
       margin-bottom: 53.2px;
@@ -74,12 +69,6 @@
       height: 216.24px;
     }
 
-    //@media (max-width: $bigTablet) {
-    //  flex: 0 0 50%; /* ширина слайда */
-    //  max-width: 50%;
-    //  height: 239.4px;
-    //}
-
     @media (max-width: $tablet) {
         flex: 0 0 50%; /* ширина слайда */
         max-width: 50%;
@@ -104,46 +93,42 @@
 
   &__description {
     position: absolute;
-    bottom: 50px;
-    left: 21px;
+    bottom: 20px;
+    left: 0;
+    display: flex;
+    align-items: center;
+    min-width: 277px;
+    height: 63px;
+    padding: 0 30px;
+    background-color: #535353;
     font-family: 'Roboto', sans-serif;
     font-size: 16.4px;
     line-height: 70%;
     color: #ffffff;
-
+    
     @media (max-width: $middleMonitor) {
-      bottom: 40px;
-      left: 16.8px;
-      font-size: 13.5px;
+      min-width: 212px;
+      height: 50px;
+      padding: 0 20px;
+      font-size: 12.6px;
     }
 
     @media (max-width: $smallMonitor) {
-      bottom: 35px;
-      left: 14.28px;
+      min-width: 161px;
+      height: 40px;
+      padding: 0 15px;
       font-size: 12px;
     }
 
-    //@media (max-width: $bigTablet) {
-    //  bottom: 30px;
-    //  left: 22.8px;
-    //  font-size: 14px;
-    //}
-
     @media (max-width: $tablet) {
-      bottom: 32px;
-      left: 22.8px;
-      font-size: 14px;
+      font-size: 12.6px;
     }
 
     @media (max-width: $bigPhone) {
-      bottom: 38px;
-      left: 30px;
       font-size: 14px;
     }
 
     @media (max-width: $smallPhone) {
-      bottom: 34.3px;
-      left: 25.5px;
       font-size: 12px;
     }
   }
