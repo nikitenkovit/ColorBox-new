@@ -27,7 +27,15 @@
     contactsIframe.style.display = 'block';
   };
 
-  questionsButton.addEventListener('click', () => {
+  const handleEscKeyDown = (evt) => {
+    if (evt.code === `Escape`) {
+      evt.preventDefault();
+
+      closeModal();
+    }
+  };
+
+  const showModal = () => {
     modalWindow.classList.add('modal-window__overlay--open');
     setTimeout(function () {
       pageMain.classList.add('filter-blur');
@@ -38,14 +46,22 @@
     body.classList.add('modal-open');
     removeTabNavigation(allLinks);
     removeTabNavigation(allButtons);
-  })
 
-  closeButton.addEventListener('click', () => {
+    document.addEventListener(`keydown`, handleEscKeyDown);
+  };
+
+  const closeModal = () => {
     modalWindow.classList.remove('modal-window__overlay--open');
     pageMain.classList.remove('filter-blur');
     pageHeader.classList.remove('filter-blur');
     body.classList.remove('modal-open');
     addTabNavigation(allLinks);
     addTabNavigation(allButtons);
-  })
+
+    document.removeEventListener(`keydown`, handleEscKeyDown);
+  };
+
+  questionsButton.addEventListener('click', showModal)
+
+  closeButton.addEventListener('click', closeModal)
 }());

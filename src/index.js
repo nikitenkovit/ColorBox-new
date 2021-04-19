@@ -98,7 +98,7 @@ const form = document.querySelector(`.modal-window__form`);
 const allFields = form.querySelectorAll(`input, textarea`);
 const successfulMessage = document.querySelector(`.modal-window__successful-message`);
 
-const baseURL = `http://httpbin.org/post`;
+const baseURL = `/netcat/add.php?isNaked=1`;
 
 const timeout = 7000;
 
