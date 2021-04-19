@@ -85,3 +85,61 @@ window.addEventListener('scroll', function () {
         startIncreasingNumbers();
     }
 });
+
+// форма
+
+const form = document.querySelector(`.modal-window__form`);
+const allFields = form.querySelectorAll(`input, textarea`);
+const successfulMessage = document.querySelector(`.modal-window__successful-message`);
+
+import Axios from 'axios';
+
+const baseURL = `/netcat/add.php?isNaked=1`;
+
+const timeout = 7000;
+
+const axiosInstance = Axios.create({baseURL, timeout});
+
+const clearAllFields = () => {
+    for (const field of allFields) {
+        field.value = ``;
+    }
+};
+
+const showSuccessfulMessage = () => {
+    successfulMessage.classList.add(`modal-window__successful-message--active`);
+
+    setTimeout(() => {
+        successfulMessage.classList.remove(`modal-window__successful-message--active`);
+    }, 3000)
+}
+
+const showError = () => {
+    form.style.animation = `shake .6s`
+
+    setTimeout(() => {
+        form.style.animation = ``
+    }, 600)
+}
+
+const submitForm = () => {
+    const data = new FormData(form);
+
+    axiosInstance.post(``, data)
+        .then((response) => {
+            if (response.status >= 200 || response.status < 400) {
+                console.log(response)
+                showSuccessfulMessage();
+
+                clearAllFields();
+            }
+        }).catch(() => {
+        showError();
+    })
+};
+
+form.addEventListener(`submit`, (evt) => {
+    evt.preventDefault();
+
+    submitForm();
+});
