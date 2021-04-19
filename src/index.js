@@ -7,6 +7,12 @@ import './components/modules/modal-window/modal';
 import {startIncreasingNumbers} from "./components/modules/statistics/statistics";
 import CasesHoverMove from "./components/modules/cases/cases-hover-move";
 import {ChiefSlider} from "./js/chiefSlider";
+import {phoneMask} from "./js/phone-mask";
+import Axios from 'axios';
+
+// маска для номера телефона
+
+phoneMask();
 
 // убирает фокус при клике на элемент. Фокус с клавиатуры остаётся доступным
 const selectors = [`a[href]`, `button`];
@@ -92,9 +98,7 @@ const form = document.querySelector(`.modal-window__form`);
 const allFields = form.querySelectorAll(`input, textarea`);
 const successfulMessage = document.querySelector(`.modal-window__successful-message`);
 
-import Axios from 'axios';
-
-const baseURL = `/netcat/add.php?isNaked=1`;
+const baseURL = `http://httpbin.org/post`;
 
 const timeout = 7000;
 
