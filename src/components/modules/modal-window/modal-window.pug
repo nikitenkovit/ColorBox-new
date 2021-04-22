@@ -2,7 +2,7 @@ section(class='modal-window modal-window__overlay' role='dialog' aria-modal='tru
     div(class='modal-window__wrapper')
         h2.visually-hidden Задать вопрос
         button(class='modal-window__close-btn' aria-label='Закрыть окно')
-        form(class='modal-window__form ask-form' method='post' action='#')
+        form(class='modal-window__form ask-form' method='post' action='./netcat/add.php?isNaked=1')
             p.modal-window__successful-message Ваш вопрос успешно отправлен
             label(class='modal-window__label' for='name') Имя
             input#name(class='modal-window__input' name='f_name')

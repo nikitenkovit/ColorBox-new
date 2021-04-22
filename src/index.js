@@ -8,24 +8,10 @@ import {startIncreasingNumbers} from "./components/modules/statistics/statistics
 import CasesHoverMove from "./components/modules/cases/cases-hover-move";
 import {ChiefSlider} from "./js/chiefSlider";
 import {phoneMask} from "./js/phone-mask";
-import Axios from 'axios';
 
 // маска для номера телефона
 
 phoneMask();
-
-// убирает фокус при клике на элемент. Фокус с клавиатуры остаётся доступным
-const selectors = [`a[href]`, `button`];
-
-document.addEventListener(`click`, (evt) => {
-    selectors.forEach((selector) => {
-        const clickedElement = evt.target.closest(selector);
-
-        if (clickedElement && clickedElement === document.activeElement) {
-            clickedElement.blur();
-        }
-    });
-});
 
 // иниализаци эффекта наведения мыши в блоке Кейсы
 const containers = document.querySelectorAll(`.cases__item`);
@@ -98,12 +84,6 @@ const form = document.querySelector(`.modal-window__form`);
 const allFields = form.querySelectorAll(`input, textarea`);
 const successfulMessage = document.querySelector(`.modal-window__successful-message`);
 
-const baseURL = `/netcat/add.php?isNaked=1`;
-
-const timeout = 7000;
-
-const axiosInstance = Axios.create({baseURL, timeout});
-
 const clearAllFields = () => {
     for (const field of allFields) {
         field.value = ``;
@@ -126,24 +106,25 @@ const showError = () => {
     }, 600)
 }
 
-const submitForm = () => {
-    const data = new FormData(form);
-
-    axiosInstance.post(``, data)
-        .then((response) => {
-            if (response.status >= 200 || response.status < 400) {
-                console.log(response)
-                showSuccessfulMessage();
-
-                clearAllFields();
-            }
-        }).catch(() => {
-        showError();
-    })
-};
-
-form.addEventListener(`submit`, (evt) => {
+form.addEventListener(`submit`, function(evt) {
     evt.preventDefault();
 
-    submitForm();
+    const request = new XMLHttpRequest();
+    request.onreadystatechange = function() {
+
+        if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+            console.log(this);
+            showSuccessfulMessage();
+
+            clearAllFields();
+        } else if (this.readyState === XMLHttpRequest.DONE && this.status > 400 ) {
+            showError();
+        }
+    }
+
+    request.open(this.method, this.action, true);
+
+    const data = new FormData(this);
+
+    request.send(data);
 });
