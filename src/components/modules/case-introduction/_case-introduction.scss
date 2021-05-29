@@ -1,0 +1,29 @@
+.case-introduction {
+  background: url("./images/blue-background.jpeg") no-repeat center;
+  background-size: cover;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 240px;
+    margin-top: 60px;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 27px;
+    font-size: 35px;
+    font-weight: 500;
+    color: #ffffff;
+    text-align: center;
+  }
+
+  &__description {
+    font-family: 'RobotoLight', sans-serif;
+    font-size: 19px;
+    color: #ffffff;
+    text-align: center;
+  }
+}

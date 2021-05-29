@@ -1,0 +1,19 @@
+.case-images {
+  &__list {
+    list-style: none;
+  }
+
+  &__item {
+    margin-bottom: 70px;
+
+    &:last-child {
+      margin-bottom: 130px;
+    }
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}

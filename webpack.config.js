@@ -14,8 +14,8 @@ const PAGES_DIR = `${Paths.SRC}/components/pages/`;
 const PAGES = fs.readdirSync(PAGES_DIR).filter((filename) => filename.endsWith('.pug'));
 
 module.exports = {
-    target: "browserslist",
-    // target: "web",
+    // target: "browserslist",
+    target: "web",
     entry: {
         app: Paths.SRC,
     },
@@ -28,7 +28,8 @@ module.exports = {
         open: false,
         port: 3000,
         compress: true,
-        historyApiFallback: true
+        historyApiFallback: true,
+        hot: true
     },
 
     module: {
@@ -62,7 +63,7 @@ module.exports = {
                         loader: "css-loader",
                         options: {
                             url: (url) => {
-                                if (url.includes('.png') || url.includes('.jpg') || url.includes('.svg')) {
+                                if (url.includes('.png') || url.includes('.jpg') || url.includes('.svg') || url.includes('.jpeg')) {
                                     return false;
                                 }
 
@@ -102,5 +103,5 @@ module.exports = {
         extensions: [".js", ".jsx"]
     },
 
-    // devtool: "source-map",
+    devtool: "source-map",
 };

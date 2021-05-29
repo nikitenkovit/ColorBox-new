@@ -1,0 +1,23 @@
+.case-come-back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 240px;
+  background: url("./images/blue-background.jpeg") no-repeat center;
+  background-size: cover;
+  
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 195px;
+    height: 60px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 21.2px;
+    line-height: 70%;
+    color: #ffffff;
+    text-decoration: none;
+    border: 1px solid #ffffff;
+  }
+}
