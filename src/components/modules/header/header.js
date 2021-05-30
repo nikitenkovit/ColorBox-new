@@ -1,6 +1,6 @@
 (function () {
   const pageHeader = document.querySelector('.page__header');
-  const introduction = document.querySelector('.introduction');
+  const introduction = document.getElementById('introduction');
   let currentIntroductionMarginTop = parseInt(getComputedStyle(introduction).marginTop, 10);
   let currentPageWidth = document.documentElement.clientWidth;
 

@@ -10,7 +10,7 @@
   const allLinks = body.querySelectorAll('a');
   const allButtons = body.querySelectorAll('button');
 
-  const removeTabNavigation = function (array) {
+  const removeTabNavigation = (array) => {
     for (let i = 0; i < array.length; i++) {
       if (array[i] === closeButton || array[i] === applyButton) {
         continue;
@@ -20,7 +20,7 @@
     contactsIframe.style.display = 'none';
   };
 
-  const addTabNavigation = function (array) {
+  const addTabNavigation = (array) => {
     for (let i = 0; i < array.length; i++) {
       array[i].setAttribute('tabindex', '0');
     }
@@ -61,7 +61,8 @@
     document.removeEventListener(`keydown`, handleEscKeyDown);
   };
 
-  questionsButton.addEventListener('click', showModal)
-
-  closeButton.addEventListener('click', closeModal)
+  if (modalWindow) {
+    questionsButton.addEventListener('click', showModal)
+    closeButton.addEventListener('click', closeModal)
+  }
 }());

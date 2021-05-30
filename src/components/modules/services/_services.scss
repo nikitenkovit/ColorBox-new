@@ -249,7 +249,17 @@
 
   .services {
     padding-top: 55px;
-    padding-bottom: 30px;
+    padding-bottom: 20px;
+
+    @media (max-width: $tablet) {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+
+    @media (max-width: $bigPhone) {
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
 
     &__wrapper {
       padding-bottom: 0;
@@ -262,6 +272,23 @@
 
     &__list {
       justify-content: center;
+
+      @media (max-width: $tablet) {
+        display: flex;
+      }
+
+      @media (max-width: $bigPhone) {
+        grid-row-gap: 36px;
+      }
+
+      @media (max-width: $smallPhone) {
+        grid-row-gap: 26px;
+      }
+    }
+
+    &__item {
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 }

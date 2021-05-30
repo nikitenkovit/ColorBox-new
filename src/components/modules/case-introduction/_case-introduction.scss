@@ -18,6 +18,11 @@
     font-weight: 500;
     color: #ffffff;
     text-align: center;
+
+    @media (max-width: $bigPhone) {
+      font-size: 29px;
+      margin-bottom: 20px;
+    }
   }
 
   &__description {

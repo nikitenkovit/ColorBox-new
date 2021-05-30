@@ -4,10 +4,14 @@ import './styles/main.scss';
 import "./components/modules/header/header";
 import './components/modules/modal-window/modal';
 
-import {startIncreasingNumbers} from "./components/modules/statistics/statistics";
 import CasesHoverMove from "./components/modules/cases/cases-hover-move";
 import {ChiefSlider} from "./js/chiefSlider";
 import {phoneMask} from "./js/phone-mask";
+import {statisticsFunction} from "./components/modules/statistics/statistics";
+
+// анимация блока статистика
+
+statisticsFunction();
 
 // маска для номера телефона
 
@@ -17,109 +21,77 @@ phoneMask();
 const containers = document.querySelectorAll(`.cases__item`);
 
 for (let i = 0; i < containers.length; i++) {
-    const hoverMove = new CasesHoverMove(containers[i], `.cases-frame__description`);
-    hoverMove.init();
+  const hoverMove = new CasesHoverMove(containers[i], `.cases-frame__description`);
+  hoverMove.init();
 }
 
-// инициализация слайдера. Блок Производство
-document.addEventListener('DOMContentLoaded', function() {
-    const $slider = document.getElementById('production');
+// инициализация слайдера
 
-    new ChiefSlider($slider, {
-        loop: true,
-        autoplay: true,
-        interval: 5000,
-        refresh: true,
+if (document.querySelector(`.page__main`)) {
+  document.addEventListener('DOMContentLoaded', function () {
+    const sliderProduction = document.getElementById('production');
+    const sliderBlog = document.getElementById('blog');
+
+    new ChiefSlider(sliderProduction, {
+      loop: true,
+      autoplay: true,
+      interval: 5000,
+      refresh: true,
     });
-});
 
-// инициализация слайдера. Блок Блог>
-document.addEventListener('DOMContentLoaded', function() {
-    const $slider = document.getElementById('blog');
-
-    new ChiefSlider($slider, {
-        loop: false,
-        autoplay: false,
-        interval: 5000,
-        refresh: true,
+    new ChiefSlider(sliderBlog, {
+      loop: false,
+      autoplay: false,
+      interval: 5000,
+      refresh: true,
     });
-});
-
-// debounce
-const DEBOUNCE_INTERVAL = 300;
-
-export const debounce = (callback, wait = DEBOUNCE_INTERVAL) => {
-    let timeout = null;
-    return (...args) => {
-        clearTimeout(timeout);
-        timeout = setTimeout(() => callback(...args), wait);
-    };
-};
-
-// анимация
-
-const statistics = document.querySelector('.statistics');
-let statisticsCoords = statistics.getBoundingClientRect().top + (statistics.offsetHeight / 2);
-
-let windowHeight = document.documentElement.clientHeight;
-let bottomHeightValue = 0;
-
-const changeHeightSettings = debounce(() => {
-    windowHeight = document.documentElement.clientHeight;
-    statisticsCoords = statistics.getBoundingClientRect().top + (statistics.offsetHeight / 2);
-})
-
-window.addEventListener(`resize`, changeHeightSettings);
-
-window.addEventListener('scroll', function () {
-    bottomHeightValue = windowHeight + window.pageYOffset;
-    if (bottomHeightValue >= statisticsCoords) {
-        startIncreasingNumbers();
-    }
-});
+  });
+}
 
 // форма
 
 const form = document.querySelector(`.modal-window__form`);
-const allFields = form.querySelectorAll(`input, textarea`);
-const successfulMessage = document.querySelector(`.modal-window__successful-message`);
 
-const clearAllFields = () => {
+if (form) {
+  const allFields = form.querySelectorAll(`input, textarea`);
+  const successfulMessage = document.querySelector(`.modal-window__successful-message`);
+
+  const clearAllFields = () => {
     for (const field of allFields) {
-        field.value = ``;
+      field.value = ``;
     }
-};
+  };
 
-const showSuccessfulMessage = () => {
+  const showSuccessfulMessage = () => {
     successfulMessage.classList.add(`modal-window__successful-message--active`);
 
     setTimeout(() => {
-        successfulMessage.classList.remove(`modal-window__successful-message--active`);
+      successfulMessage.classList.remove(`modal-window__successful-message--active`);
     }, 3000)
-}
+  }
 
-const showError = () => {
+  const showError = () => {
     form.style.animation = `shake .6s`
 
     setTimeout(() => {
-        form.style.animation = ``
+      form.style.animation = ``
     }, 600)
-}
+  }
 
-form.addEventListener(`submit`, function(evt) {
+  form.addEventListener(`submit`, function (evt) {
     evt.preventDefault();
 
     const request = new XMLHttpRequest();
-    request.onreadystatechange = function() {
+    request.onreadystatechange = function () {
 
-        if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
-            console.log(this);
-            showSuccessfulMessage();
+      if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+        console.log(this);
+        showSuccessfulMessage();
 
-            clearAllFields();
-        } else if (this.readyState === XMLHttpRequest.DONE && this.status > 400 ) {
-            showError();
-        }
+        clearAllFields();
+      } else if (this.readyState === XMLHttpRequest.DONE && this.status > 400) {
+        showError();
+      }
     }
 
     request.open(this.method, this.action, true);
@@ -127,4 +99,5 @@ form.addEventListener(`submit`, function(evt) {
     const data = new FormData(this);
 
     request.send(data);
-});
+  });
+}

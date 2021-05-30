@@ -6,8 +6,24 @@
   &__item {
     margin-bottom: 70px;
 
+    @media (max-width: $tablet) {
+      margin-bottom: 40px;
+    }
+
+    @media (max-width: $bigPhone) {
+      margin-bottom: 30px;
+    }
+
     &:last-child {
       margin-bottom: 130px;
+
+      @media (max-width: $tablet) {
+        margin-bottom: 70px;
+      }
+
+      @media (max-width: $bigPhone) {
+        margin-bottom: 50px;
+      }
     }
   }
 

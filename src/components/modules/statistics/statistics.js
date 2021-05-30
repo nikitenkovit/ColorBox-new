@@ -1,45 +1,79 @@
-const statisticsBlock = document.querySelector('.statistics');
-const elementNumberOne = document.querySelector('.statistics-number-1');
-const elementNumberTwo = document.querySelector('.statistics-number-2');
-const elementNumberThree = document.querySelector('.statistics-number-3');
-const elementNumberFour = document.querySelector('.statistics-number-4');
+const DEBOUNCE_INTERVAL = 300;
 
-const necessaryNumberOne = parseInt(elementNumberOne.textContent, 10);
-const necessaryNumberTwo = parseInt(elementNumberTwo.textContent, 10);
-const necessaryNumberThree = parseInt(elementNumberThree.textContent, 10);
-const necessaryNumberFour = parseInt(elementNumberFour.textContent, 10);
+const debounce = (callback, wait = DEBOUNCE_INTERVAL) => {
+    let timeout = null;
+    return (...args) => {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => callback(...args), wait);
+    };
+};
 
-statisticsBlock.style.opacity = 0;
+export const statisticsFunction = () => {
+  const statisticsBlock = document.querySelector('.statistics');
 
-statisticsBlock.style.transition = `opacity .3s ease`;
+  if (statisticsBlock) {
+    const elementNumberOne = document.querySelector('.statistics-number-1');
+    const elementNumberTwo = document.querySelector('.statistics-number-2');
+    const elementNumberThree = document.querySelector('.statistics-number-3');
+    const elementNumberFour = document.querySelector('.statistics-number-4');
 
-let isAlreadyWorked = false;
+    const necessaryNumberOne = parseInt(elementNumberOne.textContent, 10);
+    const necessaryNumberTwo = parseInt(elementNumberTwo.textContent, 10);
+    const necessaryNumberThree = parseInt(elementNumberThree.textContent, 10);
+    const necessaryNumberFour = parseInt(elementNumberFour.textContent, 10);
 
-const outputNumber = (number, element, time, step) => {
-    let currentValueNumber = 0;
+    statisticsBlock.style.opacity = 0;
+    statisticsBlock.style.transition = `opacity .3s ease`;
 
-    const intervalTime = Math.round(time / (number / step));
+    let isAlreadyWorked = false;
 
-    const interval = setInterval(function () {
+    const outputNumber = (number, element, time, step) => {
+      let currentValueNumber = 0;
+
+      const intervalTime = Math.round(time / (number / step));
+
+      const interval = setInterval(function () {
         currentValueNumber += step;
 
         if (currentValueNumber >= number) {
-            clearInterval(interval);
+          clearInterval(interval);
         }
 
         element.innerHTML = currentValueNumber;
-    }, intervalTime);
-};
+      }, intervalTime);
+    };
 
-export const startIncreasingNumbers = () => {
-    statisticsBlock.style.opacity = 1;
+    const startIncreasingNumbers = () => {
+      statisticsBlock.style.opacity = 1;
 
-    if (!isAlreadyWorked) {
+      if (!isAlreadyWorked) {
         outputNumber(necessaryNumberOne, elementNumberOne, 3000, 7);
         outputNumber(necessaryNumberTwo, elementNumberTwo, 3000, 1);
         outputNumber(necessaryNumberThree, elementNumberThree, 3000, 1);
         outputNumber(necessaryNumberFour, elementNumberFour, 3000, 4);
 
         isAlreadyWorked = true;
-    }
+      }
+    };
+
+    let statisticsCoords = statisticsBlock.getBoundingClientRect().top + (statisticsBlock.offsetHeight / 2);
+
+    let windowHeight = document.documentElement.clientHeight;
+    let bottomHeightValue = 0;
+
+    const changeHeightSettings = debounce(() => {
+      windowHeight = document.documentElement.clientHeight;
+      statisticsCoords = statisticsBlock.getBoundingClientRect().top + (statisticsBlock.offsetHeight / 2);
+    })
+
+    window.addEventListener(`resize`, changeHeightSettings);
+
+    window.addEventListener('scroll', function () {
+      bottomHeightValue = windowHeight + window.pageYOffset;
+      if (bottomHeightValue >= statisticsCoords) {
+        startIncreasingNumbers();
+      }
+    });
+  }
 };
+
