@@ -1130,3 +1130,9 @@
     background-size: auto 15px;
   }
 }
+
+.case-page .page__header {
+  @media (max-width: $tablet) {
+    display: none;
+  }
+}

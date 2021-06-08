@@ -1,27 +1,41 @@
 .case-introduction {
-  background: url("./images/blue-background.jpeg") no-repeat center;
-  background-size: cover;
+  background: #01aff1;
+
+  @media (max-width: $tablet) {
+    margin-top: 0 !important;
+  }
 
   &__wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 240px;
+    min-height: 140px;
     margin-top: 60px;
+
+    @media (max-width: $smallMonitor) {
+      min-height: 100px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: $tablet) {
+      margin-top: 0;
+    }
   }
 
   &__title {
     margin: 0;
-    margin-bottom: 27px;
     font-size: 35px;
     font-weight: 500;
     color: #ffffff;
     text-align: center;
 
+    @media (max-width: $smallMonitor) {
+      font-size: 25.81px;
+    }
+
     @media (max-width: $bigPhone) {
-      font-size: 29px;
-      margin-bottom: 20px;
+      font-size: 22px;
     }
   }
 
