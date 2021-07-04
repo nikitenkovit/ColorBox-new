@@ -174,9 +174,10 @@ html, body {
 @import "../components/modules/questions/questions";
 @import "../components/modules/contacts/contacts";
 @import "../components/modules/modal-window/modal";
-@import "../components/modules/case-introduction/case-introduction";
+@import "../components/modules/level-two-introduction/level-two-introduction";
 @import "../components/modules/case-images/case-images";
-@import "../components/modules/case-come-back/case-come-back";
+@import "../components/modules/come-back/come-back";
+@import "../components/modules/blog-content/blog-content";
 
 input:not([type=checkbox]):not([type=radio]),
 textarea,

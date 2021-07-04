@@ -1136,3 +1136,9 @@
     display: none;
   }
 }
+
+.blog-page .page__header {
+  @media (max-width: $tablet) {
+    display: none;
+  }
+}

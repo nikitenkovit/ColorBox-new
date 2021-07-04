@@ -1,10 +1,9 @@
-.case-come-back {
+.come-back {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 240px;
-  background: url("./images/blue-background.jpeg") no-repeat center;
-  background-size: cover;
+  min-height: 160px;
+  background: #01aff1;
   
   &__button {
     display: flex;
