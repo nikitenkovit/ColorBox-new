@@ -34,29 +34,29 @@
   }
 
   &__video {
-    display: block;
-    width: 100%;
-    height: 810.56px;
-    border: none;
+    display: block !important;
+    width: 100% !important;
+    height: 810.56px !important;
+    border: none !important;
 
     @media (max-width: $middleMonitor) {
-      height: 648.56px;
+      height: 648.56px !important;
     }
 
     @media (max-width: $smallMonitor) {
-      height: 551.27px;
+      height: 551.27px !important;
     }
 
     @media (max-width: $tablet) {
-      height: 408.37px;
+      height: 408.37px !important;
     }
 
     @media (max-width: $bigPhone) {
-      height: 199.68px;
+      height: 199.68px !important;
     }
 
     @media (max-width: $smallPhone) {
-      height: 169.87px;
+      height: 169.87px !important;
     }
   }
 }
