@@ -32,4 +32,31 @@
     width: 100%;
     height: auto;
   }
+
+  &__video {
+    display: block;
+    width: 100%;
+    height: 810.56px;
+    border: none;
+
+    @media (max-width: $middleMonitor) {
+      height: 648.56px;
+    }
+
+    @media (max-width: $smallMonitor) {
+      height: 551.27px;
+    }
+
+    @media (max-width: $tablet) {
+      height: 408.37px;
+    }
+
+    @media (max-width: $bigPhone) {
+      height: 199.68px;
+    }
+
+    @media (max-width: $smallPhone) {
+      height: 169.87px;
+    }
+  }
 }
