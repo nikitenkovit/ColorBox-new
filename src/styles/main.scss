@@ -77,7 +77,7 @@ body {
 
 body.case-page,
 body.blog-page {
-  @media (max-width: $tablet) {
+  @media (max-width: 1000px) {
     margin-top: 190px;
   }
 

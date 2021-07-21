@@ -1,3 +1,14 @@
+.case-page .page__header,
+.blog-page .page__header {
+  @media (max-width: $tablet) {
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: $bigPhone) {
+    margin-bottom: 0;
+  }
+}
+
 /*--------------header top--------------------*/
 
 .page__header {
