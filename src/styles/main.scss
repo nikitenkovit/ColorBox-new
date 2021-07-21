@@ -65,6 +65,25 @@ $smallPhone: 374px;
 
 body {
   font-family: 'Roboto', sans-serif;
+
+  @media (max-width: 1000px) {
+    margin-top: 150px;
+  }
+
+  @media (max-width: $bigPhone) {
+    margin-top: 55px;
+  }
+}
+
+body.case-page,
+body.blog-page {
+  @media (max-width: $tablet) {
+    margin-top: 190px;
+  }
+
+  @media (max-width: $bigPhone) {
+    margin-top: 95px;
+  }
 }
 
 html, body {
@@ -161,6 +180,7 @@ html, body {
   }
 }
 
+@import "../components/layout/layout-index";
 @import "slider-bottons";
 @import "../components/modules/header/header";
 @import "../components/modules/introduction/introduction";

@@ -5,8 +5,10 @@ header(class='page__header')
         div(class='header__wrapper wrapper')
             div(class='header__logo logo')
                 picture(class='logo__picture')
+                    source(srcset='./images/logo-mobile.png' media='(max-width: 767px)')
                     source(srcset='./images/logo-tablet.png' media='(max-width: 1080px)')
                     img(class='logo__img' src='./images/logo.png' alt='логотип Color box')
+            a(class='header__only-mobile-number' href='tel:+7(925)5087240') +7 (925) 508-72-40
             nav(class='header__top-navigation top-navigation')
                 ul(class='top-navigation__list')
                     li(class='top-navigation__item')
@@ -23,8 +25,9 @@ header(class='page__header')
                         a(class='top-navigation__link' href='#') Print
             div(class='header__contacts header-contacts')
                 a(class='header-contacts__link header-contacts__link--call' href='tel:+7(499)2571478') +7 (499) 257-1478
-                a(class='header-contacts__link header-contacts__link--whatsapp' href='tel:+7(925)5087240') +7 (925) 508-7240
+                a(class='header-contacts__link header-contacts__link--whatsapp' target="_blank" href="https://wa.me/79255087240") +7 (925) 508-7240
                 a(class='header-contacts__link header-contacts__link--write' href='mailto:info@colorbox.ru') Написать
+            button(class='header__toggle-button' aria-label='открыть / закрыть меню')
     // / header__top
     // header__bottom
     div(class='header__bottom')

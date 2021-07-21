@@ -10,7 +10,15 @@
   }
 
   @media (max-width: $tablet) {
-    padding-top: 0;
+    padding-top: 60px;
+  }
+
+  @media (max-width: $bigPhone) {
+    padding-top: 40px;
+  }
+
+  @media (max-width: $smallPhone) {
+    padding-top: 30px;
   }
 
   &__wrapper {
@@ -48,17 +56,16 @@
     }
 
     @media (max-width: $tablet) {
+      padding: 0;
       margin-bottom: 70px;
 
       &::after {
-        width: 752px;
-        height: 19px;
+        display: none;
       }
     }
 
     @media (max-width: $bigPhone) {
       margin-bottom: 35px;
-      padding-bottom: 65px;
 
       &::after {
         width: 367px;
@@ -68,7 +75,6 @@
 
     @media (max-width: $smallPhone) {
       margin-bottom: 25px;
-      padding-bottom: 50px;
 
       &::after {
         width: 313px;
@@ -85,17 +91,17 @@
 
     @media (max-width: $tablet) {
       display: grid;
-      grid-template-columns: auto auto;
-      justify-content: space-around;
-      grid-row-gap: 65px;
+      grid-template-columns: repeat(4, auto);
+      justify-content: space-between;
+      grid-row-gap: 40px;
     }
 
     @media (max-width: $bigPhone) {
-      grid-row-gap: 36px;
+      grid-row-gap: 20px;
     }
 
     @media (max-width: $smallPhone) {
-      grid-row-gap: 26px;
+      grid-row-gap: 16px;
     }
   }
 
@@ -203,45 +209,56 @@
     }
 
     @media (max-width: $tablet) {
-      width: 250px;
-      height: 252px;
+      width: 126px;
+      height: 129px;
       margin-right: 0;
       margin-bottom: 0;
       background: url("./images/service/mobile/znak.png") no-repeat center;
       background-size: cover;
-      font-family: "RobotoLight", sans-serif;
+      font-family: "Roboto", sans-serif;
       font-weight: 400;
-      font-size: 30px;
+      font-size: 21px;
       line-height: 90%;
-
-      &::before {
-        width: 230px;
-        height: 230px;
-      }
-    }
-
-    @media (max-width: $bigPhone) {
-      width: 147px;
-      height: 151px;
-      margin-right: 0;
-      margin-bottom: 0;
-      font-size: 18px;
-
-      &::before {
-        width: 130px;
-        height: 130px;
-      }
-    }
-
-    @media (max-width: $smallPhone) {
-      width: 126px;
-      height: 129px;
 
       &::before {
         width: 120px;
         height: 120px;
       }
     }
+
+    @media (max-width: $bigPhone) {
+      width: 62px;
+      height: 63px;
+      font-size: 10.31px;
+
+      &::before {
+        width: 60px;
+        height: 60px;
+      }
+    }
+
+    @media (max-width: $smallPhone) {
+      width: 52px;
+      height: 53px;
+      font-size: 8.8px;
+
+      &::before {
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+}
+
+.index-page .services__item--souvenirs {
+  @media (max-width: $tablet) {
+    display: none;
+  }
+}
+
+.index-page .services__item--video {
+  @media (max-width: $tablet) {
+    display: none;
   }
 }
 
@@ -291,6 +308,7 @@
       font-size: 18px;
       margin-right: 60px;
       margin-bottom: 76px;
+      font-family: 'RobotoLight', sans-serif;
 
       &:last-child {
         margin-right: 0;

@@ -38,13 +38,12 @@
       padding-bottom: 60px;
 
       &::after {
-        width: 752px;
-        height: 19px;
+        display: none;
       }
     }
 
     @media (max-width: $bigPhone) {
-      padding-bottom: 65px;
+      padding-bottom: 40px;
 
       &::after {
         width: 367px;
@@ -53,7 +52,7 @@
     }
 
     @media (max-width: $smallPhone) {
-      padding-bottom: 50px;
+      padding-bottom: 40px;
 
       &::after {
         width: 313px;

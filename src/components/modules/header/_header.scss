@@ -6,6 +6,11 @@
   width: 100%;
   background: #ffffff;
   z-index: 10;
+
+  @media (max-width: 1000px) {
+    position: fixed;
+    transform: translateX(-50%);
+  }
 }
 
 .header__top,
@@ -13,29 +18,136 @@
   border-bottom: 1px solid #a2a1a4;
 }
 
+.header__top {
+  @media (max-width: $bigPhone) {
+    position: relative;
+    border-bottom: 1px solid #6e6e6e;
+  }
+}
+
 .header__top .header__wrapper {
   display: flex;
   height: 150px;
+
+  @media (max-width: $middleMonitor) {
+    height: 120px;
+  }
+
+  @media (max-width: $smallMonitor) {
+    height: 102px;
+  }
+
+  @media (max-width: $tablet) {
+    width: 93.75vw;
+  }
+
+  @media (max-width: $bigPhone) {
+    align-items: center;
+    height: 55px;
+  }
 }
 
-.page__header .header__logo {
+.header__logo {
   margin-top: 22px;
   margin-right: 43px;
+
+  @media (max-width: $middleMonitor) {
+    margin-top: 16.6px;
+    margin-right: 34.4px;
+  }
+
+  @media (max-width: $smallMonitor) {
+    margin-top: 14.11px;
+    margin-right: 29.24px;
+  }
+
+  @media (max-width: $bigPhone) {
+    margin: 0;
+  }
 }
 
 .logo__img {
   width: 258px;
   height: 81px;
+
+  @media (max-width: $middleMonitor) {
+    width: 206.4px;
+    height: 64.8px;
+  }
+
+  @media (max-width: $smallMonitor) {
+    width: 175.1px;
+    height: 55.08px;
+  }
+
+  @media (max-width: $bigPhone) {
+    width: 104px;
+    height: 34px;
+  }
+
+  @media (max-width: $smallPhone) {
+    width: 89px;
+    height: 29px;
+  }
+}
+
+.header__only-mobile-number {
+  display: none;
+
+  @media (max-width: $bigPhone) {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    padding-left: 23px;
+    font-family: 'RobotoLight', sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+    color: #000000;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 17px;
+      height: 17px;
+      background: url("../images/mobile-icon/phone-black.svg") no-repeat center;
+      background-size: cover;
+    }
+  }
+
+  @media (max-width: $smallPhone) {
+    font-size: 14px;
+    padding-left: 19px;
+
+    &::before {
+      width: 14px;
+      height: 14px;
+    }
+  }
 }
 
 .header__top-navigation {
   align-self: center;
+
+  @media (max-width: 950px) {
+    display: none;
+  }
 }
 
 .top-navigation__list {
   display: flex;
   margin-top: 10px;
   list-style: none;
+
+  @media (max-width: $middleMonitor) {
+    margin-top: 8px;
+  }
+
+  @media (max-width: $smallMonitor) {
+    margin-top: 6.8px;
+  }
 }
 
 .top-navigation__item {
@@ -70,6 +182,24 @@
   &:focus {
     transform: scale(1.2);
   }
+
+  @media (max-width: $middleMonitor) {
+    padding: 0 18.4px;
+
+    &::after {
+      width: 1.6px;
+      height: 17.6px;
+    }
+  }
+
+  @media (max-width: $smallMonitor) {
+    padding: 0 15.64px;
+
+    &::after {
+      width: 1.6px;
+      height: 14.96px;
+    }
+  }
 }
 
 .top-navigation__link {
@@ -85,15 +215,36 @@
   &:focus {
     color: #58585a;
   }
+
+  @media (max-width: $middleMonitor) {
+    font-size: 17.22px;
+  }
+
+  @media (max-width: $smallMonitor) {
+    font-size: 14.6px;
+  }
 }
 
-.header__top .header-contacts {
+.header-contacts {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   justify-content: center;
   min-width: 280px;
   margin-left: auto;
+
+  @media (max-width: $middleMonitor) {
+    min-width: 224px;
+  }
+
+  @media (max-width: $smallMonitor) {
+    min-width: 190.4px;
+  }
+
+  @media (max-width: $bigPhone) {
+    width: 100%;
+    align-items: center;
+  }
 }
 
 .header-contacts__link {
@@ -106,6 +257,19 @@
   &:hover,
   &:focus {
     opacity: 0.7;
+  }
+
+  @media (max-width: $middleMonitor) {
+    padding-right: 29.6px;
+  }
+
+  @media (max-width: $smallMonitor) {
+    padding-right: 25.16px;
+  }
+
+  @media (max-width: $bigPhone) {
+    color: #ffffff;
+    padding-right: 10vw;
   }
 }
 
@@ -125,6 +289,49 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+  }
+
+  @media (max-width: $middleMonitor) {
+    font-size: 23.36px;
+    line-height: 26.57px;
+    margin-top: 12.8px;
+    margin-bottom: 8px;
+
+    &::after {
+      width: 20px;
+      height: 32px;
+    }
+  }
+
+  @media (max-width: $smallMonitor) {
+    font-size: 19.85px;
+    line-height: 22.58px;
+    margin-top: 10.088px;
+    margin-bottom: 6.8px;
+
+    &::after {
+      width: 17px;
+      height: 27.2px;
+    }
+  }
+
+  @media (max-width: $bigPhone) {
+    margin: 0;
+    margin-bottom: 1vw;
+    font-size: 7vw;
+    line-height: 150%;
+
+    &::after {
+      top: 50%;
+      transform: translateY(-60%);
+      right: 0;
+      width: 7vw;
+      height: 7vw;
+      background-image: url('./images/mobile-icon/phone.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
   }
 }
 
@@ -154,6 +361,71 @@
     background-position: center;
     background-size: cover;
   }
+
+  @media (max-width: $middleMonitor) {
+    font-size: 16px;
+    line-height: 26.57px;
+
+    &::before {
+      bottom: -16px;
+      right: 36px;
+      width: 44px;
+      height: 28.8px;
+      font-size: 11.2px;
+    }
+
+    &::after {
+      width: 27.2px;
+      height: 28.8px;
+    }
+  }
+
+  @media (max-width: $smallMonitor) {
+    font-size: 13.6px;
+    line-height: 22.58px;
+
+    &::before {
+      bottom: -13.6px;
+      right: 30.6px;
+      width: 37.4px;
+      height: 24.48px;
+      font-size: 9.52px;
+    }
+
+    &::after {
+      width: 23.12px;
+      height: 24.48px;
+    }
+  }
+
+  @media (max-width: $bigPhone) {
+    font-size: 5vw;
+    line-height: 150%;
+
+    &::before {
+      content: "WhatsApp";
+      position: absolute;
+      bottom: -17vw;
+      right: 0;
+      width: 30vw;
+      height: 20vw;
+      font-family: 'RobotoLight', sans-serif;
+      font-size: 4vw;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 25%;
+      right: 0;
+      width: 7.5vw;
+      height: 7.5vw;
+      background-image: url('./images/mobile-icon/whatsapp.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+  }
 }
 
 .header-contacts__link--write {
@@ -172,28 +444,189 @@
     background-position: center;
     background-size: cover;
   }
+
+  @media (max-width: $middleMonitor) {
+    font-size: 13.6px;
+    line-height: 47.42px;
+
+    &::after {
+      top: 10.4px;
+      width: 20.8px;
+      height: 19.2px;
+    }
+  }
+
+  @media (max-width: $smallMonitor) {
+    font-size: 11.56px;
+    line-height: 40.30px;
+
+    &::after {
+      top: 8.84px;
+      width: 16.68px;
+      height: 16.32px;
+    }
+  }
+
+  @media (max-width: $bigPhone) {
+    display: none;
+  }
+}
+
+.header__toggle-button {
+  display: none;
+
+  @media (max-width: $bigPhone) {
+    position: relative;
+    align-self: center;
+    display: block;
+    width: 30px;
+    height: 20px;
+    padding: 10px 0;
+    border: none;
+    background: transparent;
+    margin-left: 30px;
+    z-index: 100;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: #6e6e6e;
+      transition: .3s ease;
+    }
+
+    &::before {
+      top: 0;
+      box-shadow: 0 9px 0 0 #00aeef;
+    }
+
+    &::after {
+      bottom: 0;
+    }
+
+    &--active {
+      &::before {
+        top: 50%;
+        transform: translateY(-50%) rotate(45deg);
+        box-shadow: none;
+        background: #ffffff;
+      }
+
+      &::after {
+        bottom: 50%;
+        transform: translateY(50%) rotate(-45deg);
+        background: #ffffff;
+      }
+    }
+  }
+
+  @media (max-width: $smallPhone) {
+    margin-left: 25px;
+  }
 }
 
 /*--------------header bottom--------------------*/
+
+.header__bottom {
+  @media (max-width: $bigPhone) {
+    clip: rect(0 0 0 0);
+    width: 0;
+    height: 0;
+    margin: -1px;
+    border: none;
+    overflow: hidden;
+  }
+}
 
 .header__bottom .header__wrapper {
   display: flex;
   align-items: center;
   height: 67px;
+
+  @media (max-width: $middleMonitor) {
+    height: 53.6px;
+  }
+
+  @media (max-width: $smallMonitor) {
+    height: 45.56px;
+  }
+
+  @media (max-width: $tablet) {
+    width: 93.75vw;
+  }
+
+  @media (max-width: $bigPhone) {
+    height: 0;
+  }
 }
 
-.header__bottom .bottom-navigation {
+.bottom-navigation {
   flex-grow: 1;
+
+  @media (max-width: $bigPhone) {
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    padding-top: 55px;
+    background-color: #00aeef;
+    transition: .3s ease;
+  }
+
+  &--active {
+    left: 0;
+  }
 }
 
 .bottom-navigation__list {
   display: flex;
   justify-content: space-between;
   list-style: none;
+
+  @media (max-width: $bigPhone) {
+    flex-direction: column;
+  }
+
+  @media (max-width: $bigPhone) {
+    position: relative;
+    align-items: center;
+    margin-bottom: 5vw;
+    padding-bottom: 5vw;
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 50vw;
+      height: 1px;
+      background-color: #ffffff;
+    }
+  }
 }
 
 .bottom-navigation__item:last-child {
   margin-right: 55px;
+
+  @media (max-width: $middleMonitor) {
+    margin-right: 44px;
+  }
+
+  @media (max-width: $smallMonitor) {
+    margin-right: 37.4px;
+  }
+
+  @media (max-width: $bigPhone) {
+    margin-right: 0;
+  }
 }
 
 .bottom-navigation__link {
@@ -223,10 +656,41 @@
       display: block;
     }
   }
+
+  @media (max-width: $middleMonitor) {
+    font-size: 18.4px;
+  }
+
+  @media (max-width: $smallMonitor) {
+    font-size: 15.64px;
+  }
+
+  @media (max-width: $bigPhone) {
+    color: #ffffff
+  }
+
+  @media (max-width: $bigPhone) {
+    font-size: 7vw;
+    line-height: 150%;
+
+    &:hover,
+    &:focus {
+      color: #ffffff;
+
+      &::after {
+        display: none;
+      }
+    }
+  }
 }
 
 .header__social {
   margin-left: auto;
+
+  @media (max-width: $bigPhone) {
+    margin: 0;
+    margin-top: 8vw;
+  }
 }
 
 .header-social__list {
@@ -235,6 +699,21 @@
   width: 122px;
   height: 36px;
   list-style: none;
+
+  @media (max-width: $middleMonitor) {
+    width: 97.6px;
+    height: 28.8px;
+  }
+
+  @media (max-width: $smallMonitor) {
+    width: 82.96px;
+    height: 24.48px;
+  }
+
+  @media (max-width: $bigPhone) {
+    width: 38vw;
+    height: auto;
+  }
 }
 
 .header-social__link {
@@ -252,6 +731,31 @@
     border: 1px solid #00d1e0;
     background-color: #00d1e0;
   }
+
+  @media (max-width: $middleMonitor) {
+    width: 28.8px;
+    height: 28.8px;
+  }
+
+  @media (max-width: $smallMonitor) {
+    width: 24.48px;
+    height: 24.48px;
+  }
+
+  @media (max-width: $bigPhone) {
+    width: 10vw;
+    height: 10vw;
+    border: 1px solid #ffffff;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: none;
+
+    &:hover,
+    &:focus {
+      border: 1px solid #ffffff;
+      background-color: transparent;
+    }
+  }
 }
 
 .header-social__link--inst {
@@ -263,6 +767,17 @@
   &:hover,
   &:focus {
     background-image: url("./images/inst-ico-color.png");
+  }
+
+  @media (max-width: $smallMonitor) {
+    background-position: center;
+  }
+
+  @media (max-width: $bigPhone) {
+    background-image: url("./images/mobile-icon/instagram.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60%;
   }
 }
 
@@ -276,6 +791,18 @@
   &:focus {
     background-image: url("./images/f-ico-color.png");
   }
+
+  @media (max-width: $bigPhone) {
+    background-image: url("./images/mobile-icon/facebook-f.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 40%;
+
+    &:hover,
+    &:focus {
+      background-image: url("./images/mobile-icon/facebook-f.svg");
+    }
+  }
 }
 
 .header-social__link--map {
@@ -283,862 +810,15 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: 55%;
-}
 
-@media (max-width: $middleMonitor) {
-  .header__top .header__wrapper {
-    height: 120px;
-  }
-
-  .page__header .header__logo {
-    margin-top: 16.6px;
-    margin-right: 34.4px;
-  }
-
-  .logo__img {
-    width: 206.4px;
-    height: 64.8px;
-  }
-
-  .top-navigation__list {
-    margin-top: 8px;
-  }
-
-  .top-navigation__item {
-    padding: 0 18.4px;
-
-    &::after {
-      width: 1.6px;
-      height: 17.6px;
-    }
-  }
-
-  .top-navigation__link {
-    font-size: 17.22px;
-  }
-
-  .header__top .header-contacts {
-    min-width: 224px;
-  }
-
-  .header-contacts__link {
-    padding-right: 29.6px;
-  }
-
-  .header-contacts__link--call {
-    font-size: 23.36px;
-    line-height: 26.57px;
-    margin-top: 12.8px;
-    margin-bottom: 8px;
-
-    &::after {
-      width: 20px;
-      height: 32px;
-    }
-  }
-
-  .header-contacts__link--whatsapp {
-    font-size: 16px;
-    line-height: 26.57px;
-
-    &::before {
-      bottom: -16px;
-      right: 36px;
-      width: 44px;
-      height: 28.8px;
-      font-size: 11.2px;
-    }
-
-    &::after {
-      width: 27.2px;
-      height: 28.8px;
-    }
-  }
-
-  .header-contacts__link--write {
-    font-size: 13.6px;
-    line-height: 47.42px;
-
-    &::after {
-      top: 10.4px;
-      width: 20.8px;
-      height: 19.2px;
-    }
-  }
-
-  /*--------------header bottom--------------------*/
-
-  .header__bottom .header__wrapper {
-    height: 53.6px;
-  }
-
-  .bottom-navigation__item:last-child {
-    margin-right: 44px;
-  }
-
-  .bottom-navigation__link {
-    font-size: 18.4px;
-  }
-
-  .header-social__list {
-    width: 97.6px;
-    height: 28.8px;
-  }
-
-  .header-social__link {
-    width: 28.8px;
-    height: 28.8px;
-  }
-}
-
-@media (max-width: $smallMonitor) {
-  .header__top .header__wrapper {
-    height: 102px;
-  }
-
-  .page__header .header__logo {
-    margin-top: 14.11px;
-    margin-right: 29.24px;
-  }
-
-  .logo__img {
-    width: 175.1px;
-    height: 55.08px;
-  }
-
-  .top-navigation__list {
-    margin-top: 6.8px;
-  }
-
-  .top-navigation__item {
-    padding: 0 15.64px;
-
-    &::after {
-      width: 1.6px;
-      height: 14.96px;
-    }
-  }
-
-  .top-navigation__link {
-    font-size: 14.6px;
-  }
-
-  .header__top .header-contacts {
-    min-width: 190.4px;
-  }
-
-  .header-contacts__link {
-    padding-right: 25.16px;
-  }
-
-  .header-contacts__link--call {
-    font-size: 19.85px;
-    line-height: 22.58px;
-    margin-top: 10.088px;
-    margin-bottom: 6.8px;
-
-    &::after {
-      width: 17px;
-      height: 27.2px;
-    }
-  }
-
-  .header-contacts__link--whatsapp {
-    font-size: 13.6px;
-    line-height: 22.58px;
-
-    &::before {
-      bottom: -13.6px;
-      right: 30.6px;
-      width: 37.4px;
-      height: 24.48px;
-      font-size: 9.52px;
-    }
-
-    &::after {
-      width: 23.12px;
-      height: 24.48px;
-    }
-  }
-
-  .header-contacts__link--write {
-    font-size: 11.56px;
-    line-height: 40.30px;
-
-    &::after {
-      top: 8.84px;
-      width: 16.68px;
-      height: 16.32px;
-    }
-  }
-
-  /*--------------header bottom--------------------*/
-
-  .header__bottom .header__wrapper {
-    height: 45.56px;
-  }
-
-  .bottom-navigation__item:last-child {
-    margin-right: 37.4px;
-  }
-
-  .bottom-navigation__link {
-    font-size: 15.64px;
-  }
-
-  .header-social__list {
-    width: 82.96px;
-    height: 24.48px;
-  }
-
-  .header-social__link {
-    width: 24.48px;
-    height: 24.48px;
-  }
-
-  .header-social__link--inst {
-    background-position: center;
-  }
-
-  .header-social__link--map {
+  @media (max-width: $smallMonitor) {
     background-position: 5px, center;
   }
-}
 
-@media (max-width: 1080px) {
-
-  .page__header {
-    position: static;
-  }
-
-  .header__top,
-  .header__bottom {
-    border-bottom: none;
-  }
-
-  .header__wrapper {
-    flex-direction: column;
-    align-items: center;
-    height: auto;
-  }
-
-  .header__top .header__wrapper {
-    height: auto;
-  }
-
-  .page__header .header__logo {
-    width: 100%;
-    height: auto;
-    margin-top: 149px;
-    margin-bottom: 304px;
-    margin-right: 0;
-  }
-
-  .logo__img {
-    width: 100%;
-    height: auto;
-  }
-
-  .header__top-navigation {
-    position: absolute;
-    top: 516px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    align-self: center;
-
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      top: -21px;
-      width: 100%;
-      height: 39px;
-      background: url("./images/line-bottom-mobile.png") no-repeat center;
-      background-size: cover;
-      z-index: 2;
-    }
-
-    &::after {
-      top: auto;
-      bottom: -20px;
-    }
-  }
-
-  .top-navigation__list {
-    position: relative;
-    justify-content: space-around;
-    height: 111px;
-    margin-top: 0;
-    list-style: none;
-    z-index: 3;
-  }
-
-  .top-navigation__item {
-    position: relative;
-    display: flex;
-    flex-grow: 1;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-    transition: .2s ease-out;
-
-    &::after {
-      height: 25.6px;
-    }
-  }
-
-  .top-navigation__link {
-    font-size: 27.3px;
-    line-height: 33.5px;
-  }
-
-  .header__top .header-contacts {
-    position: relative;
-    width: 100%;
-    margin-left: 0;
-    padding-bottom: 66.5px;
-
-    &::before {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 985px;
-      height: 39px;
-      background: url("./images/line-bottom-mobile.png") no-repeat center;
-      background-size: cover;
-    }
-  }
-
-  .header-contacts__link {
-    position: relative;
-    padding-right: 123.5px;
-    width: 100%;
-    text-align: right;
-  }
-
-  .header-contacts__link--call {
-    font-size: 84.3px;
-    line-height: 96px;
-    margin-top: 0;
-    margin-bottom: 9.5px;
-
-    &::after {
-      width: 67.4px;
-      height: 107.3px;
-      background-image: url('./images/link--call-mobile.png');
-    }
-  }
-
-  .header-contacts__link--whatsapp {
-    font-size: 63.3px;
-    line-height: 103.5px;
-
-    &::before {
-      bottom: 19px;
-      right: 133px;
-      width: 129px;
-      height: 34.2px;
-      font-size: 30.4px;
-    }
-
-    &::after {
-      top: 17px;
-      right: 0;
-      width: 76px;
-      height: 80.7px;
-      background-image: url('./images/link--whatsapp-mobile.png');
-    }
-  }
-
-  .header-contacts__link--write {
-    display: none;
-  }
-
-  /*--------------header bottom--------------------*/
-
-  .header__bottom .header__wrapper {
-    display: block;
-    height: auto;
-  }
-
-  .bottom-navigation__list {
-    display: block;
-    width: 100%;
-    margin-top: 40px;
-  }
-
-  .bottom-navigation__item {
-    text-align: center;
-    margin-bottom: 52.2px;
-  }
-
-  .bottom-navigation__item:last-child {
-    margin-right: 0;
-    margin-bottom: 0;
-  }
-
-  .bottom-navigation__link {
-    font-family: RobotoLight, sans-serif;
-    font-size: 55px;
-    line-height: 34.3px;
-    text-decoration: none;
-    color: #545454;
-    text-align: center;
-
-    &::after {
-      bottom: -2px;
-      left: 0;
-      height: 3px;
-      width: 35px;
-    }
-  }
-
-  .header__social {
-    position: absolute;
-    top: 18px;
-    left: 135px;
-  }
-
-  .header-social__list {
-    width: 329px;
-    height: 95px;
-  }
-
-  .header-social__link {
-    width: 95px;
-    height: 95px;
-  }
-
-  .header-social__link--inst {
-    background: url("./images/link-inst-mobile.png") no-repeat center;
-    background-size: auto;
-  }
-
-  .header-social__link--fb {
-    background: url("./images/link-fb-mobile.png") no-repeat center;
-    background-size: auto;
-  }
-
-  .header-social__link--map {
-    background: url("./images/link-map-mobile.png") no-repeat center;
-    background-size: auto;
-  }
-}
-
-@media (max-width: $tablet) {
-  .header__wrapper {
-    width: 615px;
-  }
-
-  .page__header .header__logo {
-    margin-top: 124px;
-    margin-bottom: 212.8px;
-  }
-
-  .header__top-navigation {
-    top: 361.2px;
-
-    &::before,
-    &::after {
-      top: -14.7px;
-      height: 27.3px;
-    }
-
-    &::after {
-      top: auto;
-      bottom: -14px;
-    }
-  }
-
-  .top-navigation__list {
-    height: 77.7px;
-  }
-
-  .top-navigation__item {
-
-    &::after {
-      height: 17.92px;
-    }
-  }
-
-  .top-navigation__link {
-    font-size: 20.44px;
-    line-height: 25.08px;
-  }
-
-  .header__top .header-contacts {
-    width: 615px;
-    padding-bottom: 60px;
-
-    &::before {
-      width: 689.5px;
-      height: 27.3px;
-    }
-  }
-
-  .header-contacts__link {
-    padding-right: 86.45px;
-  }
-
-  .header-contacts__link--call {
-    font-size: 59.01px;
-    line-height: 67.2px;
-    margin-bottom: 6.65px;
-
-    &::after {
-      width: 47.18px;
-      height: 75.11px;
-    }
-  }
-
-  .header-contacts__link--whatsapp {
-    font-size: 44.31px;
-    line-height: 72.45px;
-
-    &::before {
-      bottom: 13.3px;
-      right: 93.1px;
-      width: 90.3px;
-      height: 23.94px;
-      font-size: 21.28px;
-    }
-
-    &::after {
-      top: 11.9px;
-      width: 53.2px;
-      height: 56.49px;
-    }
-  }
-
-  /*--------------header bottom--------------------*/
-
-  .bottom-navigation__list {
-    margin-top: 28px;
-  }
-
-  .bottom-navigation__item {
-    margin-bottom: 36.54px;
-  }
-
-  .bottom-navigation__link {
-    font-size: 49.77px;
-    line-height: 25.7px;
-  }
-
-  .header__social {
-    top: 12px;
-    left: 85px;
-  }
-
-  .header-social__list {
-    width: 235px;
-    height: 68px;
-  }
-
-  .header-social__link {
-    width: 68px;
-    height: 68px;
-  }
-
-  .header-social__link--inst {
-    background-size: auto 36px;
-  }
-
-  .header-social__link--fb {
-    background-size: auto 36px;
-  }
-
-  .header-social__link--map {
-    background-size: auto 36px;
-  }
-}
-
-@media (max-width: $bigPhone) {
-  .header__wrapper {
-    width: 354px;
-  }
-
-  .page__header .header__logo {
-    margin-top: 60px;
-    margin-bottom: 90px;
-  }
-
-  .header__logo .logo__img {
-    display: block;
-    width: 320px;
-    margin: 0 auto;
-  }
-
-  .header__top-navigation {
-    top: 190px;
-
-    &::before,
-    &::after {
-      top: -7px;
-      height: 13px;
-    }
-
-    &::after {
-      top: auto;
-      bottom: -7px;
-    }
-  }
-
-  .top-navigation__list {
-    height: 38px;
-  }
-
-  .top-navigation__item {
-
-    &::after {
-      height: 12px;
-    }
-  }
-
-  .top-navigation__link {
-    font-size: 11px;
-    line-height: 110%;
-  }
-
-  .header__top .header-contacts {
-    width: 305px;
-    padding-bottom: 35px;
-
-    &::before {
-      width: 337.85px;
-      height: 13.37px;
-    }
-  }
-
-  .header-contacts__link {
-    padding-right: 42.3px;
-  }
-
-  .header-contacts__link--call {
-    font-size: 30px;
-    line-height: 35px;
-    margin-bottom: 3.3px;
-
-    &::after {
-      right: 10px;
-      width: 23px;
-      height: 36.8px;
-    }
-  }
-
-  .header-contacts__link--whatsapp {
-    font-size: 23px;
-    line-height: 37.5px;
-
-    &::before {
-      bottom: 5px;
-      right: 50px;
-      width: 44.24px;
-      height: 11.7px;
-      font-size: 11.5px;
-    }
-
-    &::after {
-      top: 5.8px;
-      right: 10px;
-      width: 26px;
-      height: 27.6px;
-    }
-  }
-
-  /*--------------header bottom--------------------*/
-
-  .bottom-navigation__list {
-    margin-top: 24px;
-  }
-
-  .bottom-navigation__item {
-    margin-bottom: 22px;
-  }
-
-  .bottom-navigation__link {
-    font-size: 31.69px;
-    line-height: 15.84px;
-
-    &::after {
-      left: -1px;
-      height: 2px;
-      width: 15px;
-    }
-  }
-
-  .header__social {
-    top: 5px;
-    left: 40px;
-  }
-
-  .header-social__list {
-    width: 115px;
-    height: 33px;
-  }
-
-  .header-social__link {
-    width: 33px;
-    height: 33px;
-  }
-
-  .header-social__link--inst {
-    background-size: auto 18px;
-  }
-
-  .header-social__link--fb {
-    background-size: auto 18px;
-  }
-
-  .header-social__link--map {
-    background-size: auto 18px;
-  }
-}
-
-@media (max-width: $smallPhone) {
-  .header__wrapper {
-    width: 302px;
-  }
-
-  .page__header .header__logo {
-    margin-top: 60px;
-    margin-bottom: 85px;
-  }
-
-  .header__logo .logo__img {
-    width: 256px;
-  }
-
-  .header__top-navigation {
-    top: 165px;
-
-    &::before,
-    &::after {
-      top: -6px;
-      height: 11.05px;
-    }
-
-    &::after {
-      top: auto;
-      bottom: -6px;
-    }
-  }
-
-  .top-navigation__list {
-    height: 32.3px;
-  }
-
-  .top-navigation__item {
-
-    &::after {
-      height: 10.2px;
-    }
-  }
-
-  .top-navigation__link {
-    font-size: 10.5px;
-  }
-
-  .header__top .header-contacts {
-    width: 255px;
-    padding-bottom: 29.7px;
-
-    &::before {
-      width: 287px;
-      height: 11.36px;
-    }
-  }
-
-  .header-contacts__link {
-    padding-right: 36px;
-  }
-
-  .header-contacts__link--call {
-    font-size: 26.36px;
-    line-height: 29.99px;
-    margin-bottom: 2.8px;
-
-    &::after {
-      right: 8.5px;
-      width: 19.5px;
-      height: 31.2px;
-    }
-  }
-
-  .header-contacts__link--whatsapp {
-    font-size: 19.51px;
-    line-height: 32.41px;
-
-    &::before {
-      bottom: 4.25px;
-      right: 42.5px;
-      width: 37.6px;
-      height: 10px;
-      font-size: 10px;
-    }
-
-    &::after {
-      top: 5px;
-      right: 8.5px;
-      width: 22px;
-      height: 23.4px;
-    }
-  }
-
-  /*--------------header bottom--------------------*/
-
-  .bottom-navigation__list {
-    margin-top: 23px;
-  }
-
-  .bottom-navigation__item {
-    margin-bottom: 18px;
-  }
-
-  .bottom-navigation__link {
-    font-size: 27.04px;
-    line-height: 13.52px;
-  }
-
-  .header__social {
-    top: 4.25px;
-    left: 34px;
-  }
-
-  .header-social__list {
-    width: 97.75px;
-    height: 28px;
-  }
-
-  .header-social__link {
-    width: 28px;
-    height: 28px;
-  }
-
-  .header-social__link--inst {
-    background-size: auto 15px;
-  }
-
-  .header-social__link--fb {
-    background-size: auto 15px;
-  }
-
-  .header-social__link--map {
-    background-size: auto 15px;
-  }
-}
-
-.case-page .page__header {
-  @media (max-width: $tablet) {
-    display: none;
-  }
-}
-
-.blog-page .page__header {
-  @media (max-width: $tablet) {
-    display: none;
+  @media (max-width: $bigPhone) {
+    background-image: url("./images/mobile-icon/location.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 60%;
   }
 }

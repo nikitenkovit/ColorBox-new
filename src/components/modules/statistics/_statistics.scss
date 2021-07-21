@@ -1,5 +1,4 @@
 .statistics {
-
   &__wrapper {
     padding-top: 94px;
 
@@ -12,41 +11,24 @@
     }
 
     @media (max-width: $tablet) {
-      width: 726px;
-      padding-top: 95px;
-      padding-bottom: 210px;
+      padding-top: 40px;
+      padding-bottom: 100px;
     }
 
     @media (max-width: $bigPhone) {
       width: 354px;
-      padding-top: 48px;
-      padding-bottom: 110px;
+      padding: 0 10px 60px;
     }
 
     @media (max-width: $smallPhone) {
       width: 302px;
-      padding-top: 40px;
-      padding-bottom: 93px;
+      padding: 0 7px 44px;
     }
   }
 
   &__list {
     display: flex;
     justify-content: space-between;
-
-    @media (max-width: $tablet) {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-row-gap: 170px;
-    }
-
-    @media (max-width: $bigPhone) {
-      grid-row-gap: 83px;
-    }
-
-    @media (max-width: $smallPhone) {
-      grid-row-gap: 70px;
-    }
   }
 
   &__group {
@@ -69,16 +51,16 @@
     }
 
     @media (max-width: $tablet) {
-      font-size: 117.92px;
+      font-size: 60px;
       text-align: center;
     }
 
     @media (max-width: $bigPhone) {
-      font-size: 57.58px;
+      font-size: 30px;
     }
 
     @media (max-width: $smallPhone) {
-      font-size: 49.13px;
+      font-size: 26px;
     }
   }
   
@@ -105,18 +87,16 @@
     }
 
     @media (max-width: $tablet) {
-      font-size: 45.18px;
-      line-height: 44.86px;
+      font-size: 18px;
+      line-height: 120%;
     }
 
     @media (max-width: $bigPhone) {
-      font-size: 22.06px;
-      line-height: 21.91px;
+      font-size: 11px;
     }
 
     @media (max-width: $smallPhone) {
-      font-size: 18.82px;
-      line-height: 18.69px;
+      font-size: 10px;
     }
   }
 }
