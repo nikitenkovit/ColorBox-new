@@ -145,7 +145,7 @@
 
     linkNav[i].addEventListener('click', function (e) { //по клику на ссылку
 
-      e.preventDefault(); //отменяем стандартное поведение
+      // e.preventDefault(); //отменяем стандартное поведение
 
       let w = window.pageYOffset,  // производим прокрутка прокрутка
           hash = this.href.replace(/[^#]*(.*)/, '$1');  // к id элемента, к которому нужно перейти
