@@ -265,32 +265,32 @@
 .page__case {
 
   .services {
-    padding-top: 56px;
-    padding-bottom: 0;
-
-    @media (max-width: $smallMonitor) {
-      padding-top: 40px;
-    }
-
-    @media (max-width: $tablet) {
-      padding-top: 40px;
-      padding-bottom: 60px;
-    }
-
-    @media (max-width: $bigPhone) {
-      padding-top: 30px;
-      padding-bottom: 45px;
-    }
-
-    &__wrapper {
-      padding-bottom: 0;
-      margin-bottom: 0;
-
-      &::after {
-        display: none;
-      }
-    }
-
+    //padding-top: 56px;
+    //padding-bottom: 0;
+    //
+    //@media (max-width: $smallMonitor) {
+    //  padding-top: 40px;
+    //}
+    //
+    //@media (max-width: $tablet) {
+    //  padding-top: 40px;
+    //  padding-bottom: 60px;
+    //}
+    //
+    //@media (max-width: $bigPhone) {
+    //  padding-top: 30px;
+    //  padding-bottom: 45px;
+    //}
+    //
+    //&__wrapper {
+    //  padding-bottom: 0;
+    //  margin-bottom: 0;
+    //
+    //  &::after {
+    //    display: none;
+    //  }
+    //}
+    //
     &__list {
       justify-content: center;
 
@@ -303,98 +303,104 @@
     }
 
     &__item {
-      width: 115px;
-      height: 118.95px;
-      font-size: 18px;
-      margin-right: 60px;
-      margin-bottom: 76px;
-      font-family: 'RobotoLight', sans-serif;
-
-      &:last-child {
-        margin-right: 0;
-      }
-
-      &::before {
-        width: 102.95px;
-        height: 102.95px;
-      }
-
-      @media (max-width: $smallMonitor) {
-        width: 88.4px;
-        height: 90.4px;
-        font-size: 14px;
-        margin-right: 40px;
-        margin-bottom: 56px;
-
-        &:last-child {
-          margin-right: 0;
-        }
-
-        &::before {
-          width: 82.55px;
-          height: 82.55px;
-        }
-      }
-
-      @media (max-width: $tablet) {
-        width: 130px;
-        height: 131.3px;
-        font-size: 16px;
-        margin: 0 27.5px 55px;
-
-        &:nth-child(4n) {
-          margin: 0 27.5px 55px;
-        }
-
-        &:last-child {
-          margin: 0 27.5px 55px;
-        }
-
-        &::before {
-          width: 119.2px;
-          height: 119.2px;
-        }
-      }
-
-      @media (max-width: $bigPhone) {
-        width: 95.55px;
-        height: 99.55px;
-        font-size: 14px;
-        margin: 0 11px 25px;
-
-        &:nth-child(4n) {
-          margin: 0 11px 25px;
-        }
-
-        &:last-child {
-          margin: 0 11px 25px;
-        }
-
-        &::before {
-          width: 84.5px;
-          height: 84.5px;
-        }
-      }
-
-      @media (max-width: $smallPhone) {
-        width: 81.9px;
-        height: 83.85px;
-        font-size: 13px;
-        margin: 0 9px 18px;
-
-        &:nth-child(4n) {
-          margin: 0 9px 18px;
-        }
-
-        &:last-child {
-          margin: 0 9px 18px;
-        }
-
-        &::before {
-          width: 78px;
-          height: 78px;
-        }
-      }
+      margin: auto;
+      margin-bottom: 4vw;
     }
+
+    //
+    //&__item {
+    //  width: 115px;
+    //  height: 118.95px;
+    //  font-size: 18px;
+    //  margin-right: 60px;
+    //  margin-bottom: 76px;
+    //  font-family: 'RobotoLight', sans-serif;
+    //
+    //  &:last-child {
+    //    margin-right: 0;
+    //  }
+    //
+    //  &::before {
+    //    width: 102.95px;
+    //    height: 102.95px;
+    //  }
+    //
+    //  @media (max-width: $smallMonitor) {
+    //    width: 88.4px;
+    //    height: 90.4px;
+    //    font-size: 14px;
+    //    margin-right: 40px;
+    //    margin-bottom: 56px;
+    //
+    //    &:last-child {
+    //      margin-right: 0;
+    //    }
+    //
+    //    &::before {
+    //      width: 82.55px;
+    //      height: 82.55px;
+    //    }
+    //  }
+    //
+    //  @media (max-width: $tablet) {
+    //    width: 130px;
+    //    height: 131.3px;
+    //    font-size: 16px;
+    //    margin: 0 27.5px 55px;
+    //
+    //    &:nth-child(4n) {
+    //      margin: 0 27.5px 55px;
+    //    }
+    //
+    //    &:last-child {
+    //      margin: 0 27.5px 55px;
+    //    }
+    //
+    //    &::before {
+    //      width: 119.2px;
+    //      height: 119.2px;
+    //    }
+    //  }
+    //
+    //  @media (max-width: $bigPhone) {
+    //    width: 95.55px;
+    //    height: 99.55px;
+    //    font-size: 14px;
+    //    margin: 0 11px 25px;
+    //
+    //    &:nth-child(4n) {
+    //      margin: 0 11px 25px;
+    //    }
+    //
+    //    &:last-child {
+    //      margin: 0 11px 25px;
+    //    }
+    //
+    //    &::before {
+    //      width: 84.5px;
+    //      height: 84.5px;
+    //    }
+    //  }
+    //
+    //  @media (max-width: $smallPhone) {
+    //    width: 81.9px;
+    //    height: 83.85px;
+    //    font-size: 13px;
+    //    margin: 0 9px 18px;
+    //
+    //    &:nth-child(4n) {
+    //      margin: 0 9px 18px;
+    //    }
+    //
+    //    &:last-child {
+    //      margin: 0 9px 18px;
+    //    }
+    //
+    //    &::before {
+    //      width: 78px;
+    //      height: 78px;
+    //    }
+    //  }
+    //}
   }
 }
